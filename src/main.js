@@ -5,11 +5,7 @@ import App from './App'
 import router from './router'
 import ElementUI from 'element-ui'
 import 'element-ui/lib/theme-chalk/index.css'
-import lifeCircleList from './components/lifeCircleList.vue'
-import lifeCircleHeader from './components/lifeCircleHeader.vue'
-import lifeCircleListDetails from './components/lifeCircleListDetails.vue'
-import messageBoard from './components/messageBoard.vue'
-import liftCircle from './pages/liftCircle.vue'
+
 
 Vue.use(ElementUI)
 Vue.config.productionTip = false
@@ -21,11 +17,6 @@ new Vue({
 	el: '#app',
 	router,
 	components: {
-		App,
-		lifeCircleList,
-		lifeCircleHeader,
-		lifeCircleListDetails,
-		messageBoard,
-		liftCircle
+		App
 	}
 })
