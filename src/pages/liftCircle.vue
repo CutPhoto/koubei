@@ -2,14 +2,14 @@
 	<div>
 		<lifeCircleHeader>
 			<div slot="focus">
-				<a href="/liftDetails">
-					<foucsList/>
-				</a>
+
+				<foucsList/>
+
 			</div>
 			<div slot="recommend">
-				<a href="/liftDetails">
-					<lifeCircleList/>
-				</a>
+
+				<lifeCircleList/>
+
 			</div>
 		</lifeCircleHeader>
 	</div>
@@ -19,11 +19,11 @@
 	import lifeCircleList from '../components/lifeCircleList.vue'
 	import lifeCircleHeader from '../components/lifeCircleHeader.vue'
 	import foucsList from '../components/foucsList.vue'
-	
+
 	export default {
 		data() {
 			return {
-				isShowDetails:false
+				isShowDetails: false
 			}
 		},
 		components: {

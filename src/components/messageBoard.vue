@@ -4,7 +4,7 @@
 			<li v-for="a in messageBoardListArr">
 				<img :src="a.userImgSrc"/>
 				<h2>{{a.useName}}</h2>
-				<h3>{{a.content}}</h3>
+				<h4>{{a.content}}</h4>
 				<span>{{a.time}}</span>
 			</li>
 		</ul>
@@ -57,4 +57,28 @@
 </script>
 
 <style>
+	.messageBoard .messageBoardList{
+		padding-left: 0;
+	}
+	.messageBoard .messageBoardList li{
+		list-style: none;
+	}
+	.messageBoard .messageBoardList li img{
+		display: inline-block;
+		width:56px;
+		height:50px;
+		float: left;
+	}
+	.messageBoard .messageBoardList li span{
+		margin-left: 55px;
+	}
+	.messageBoard .messageBoardList li h2{
+		font-size: 18px;
+		color: #030303;
+	}
+	.messageBoard .messageBoardList li h4{
+		font-size: 14px;
+		margin: 0;
+		color: #030303;
+	}
 </style>
