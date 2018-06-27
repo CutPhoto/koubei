@@ -26,6 +26,9 @@
 	};
 </script>
 <style>
+	.el-tabs__header{
+		margin: 0;
+	}
 	#tab-first{
 		margin-left: 110px;
 		padding-right: 0;

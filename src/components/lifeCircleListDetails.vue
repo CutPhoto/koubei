@@ -1,6 +1,7 @@
 <template>
 	<div>
 		<div class="details" v-for="del in lifeCircleListArr">
+			{{getlistArr}}
 			<div class="detailsTop">
 				<a href="/liftCircle"><i class="el-icon-arrow-left goBack"></i></a>
 				<i class="el-icon-news toShare"></i>
@@ -42,10 +43,9 @@
 		},
 		computed: {
 			getlistArr() {
-				var self = this;
-				this.lifeCircleListArr = [];
-				bus.$on('showListDetails', (data) => {
-					self.lifeCircleListArr = data.lifeCircleListArr;
+				this.bus.$on('showListDetails', (data) => {
+					console.log(asdasd)
+					this.lifeCircleListArr = data.lifeCircleListArr;
 				})
 			}
 		},
@@ -55,16 +55,20 @@
 	};
 </script>
 
-<style>
+<style scoped>
 	.details{
-		
+		font-size: 14px;
+		width: 100%;
+		padding: 10px;
 	}
 	.details .detailsTop{
 		position: relative;
 		margin-bottom: 10px;
+		width: 100%;
 	}
 	.details .detailsTop img{
 		height: 250px;
+		width: 100%;
 	}
 	.details .detailsTop .goBack{
 		position: absolute;
@@ -97,7 +101,11 @@
 		
 	}
 	.details .author{
+		width: 100%;
 		margin-bottom: 10px;
+		font-size: 12px;
+		margin:10px 0;
+		height: 50px;
 	}
 	.details .author img {
 		width: 54px;
@@ -105,22 +113,26 @@
 		border-radius: 50%;
 		float: left;
 		vertical-align: top;
+		margin: 0 10px;
 	}
 	.details .author .userName {
 		font-size: 16px;
 		color: #262626;
-		/*line-height: 38px;*/
+		margin-bottom: 10px;
+		line-height: 34px;
 	}
 	.details .author .el-button{
 		float: right;
 		vertical-align: bottom;
 		background: #fc5b00;
 		color: #fff;
+		margin-top: 10px;
 	}
 	.details h2{
 		color: #353535;
-		line-height:24px;
+		line-height:28px;
 		font-size: 14px;
+		margin: 10px 0;
 		
 	}
 	.details h2 span{
@@ -146,9 +158,10 @@
 		color: #ccc;
 		border-bottom: 1px solid #ccc;
 		line-height: 50px;
+		margin: 0;
 	}
 	.details h5 i{
 		float: right;
-		line-height: 50px;
+		line-height:30px;
 	}
 </style>

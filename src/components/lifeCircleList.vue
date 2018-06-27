@@ -30,7 +30,7 @@
 					useName: 'zjzhi',
 					num: '0',
 					time: '2018-06-25 09:54'
-				},{
+				}, {
 					imgSrc: require('../../static/img/indexImg.png'),
 					type: '#美食',
 					content: '龙虎烩，老鼠份你敢来尝尝吗？切换标签之前的钩子，若返回 false 或者返回 Promise 且被 reject，则阻止切换。',
@@ -38,7 +38,7 @@
 					useName: 'zjzhi',
 					num: '0',
 					time: '2018-06-25 09:54'
-				},{
+				}, {
 					imgSrc: require('../../static/img/indexImg.png'),
 					type: '#美食',
 					content: '龙虎烩，老鼠份你敢来尝尝吗？切换标签之前的钩子，若返回 false 或者返回 Promise 且被 reject，则阻止切换。',
@@ -46,7 +46,7 @@
 					useName: 'zjzhi',
 					num: '0',
 					time: '2018-06-25 09:54'
-				},{
+				}, {
 					imgSrc: require('../../static/img/indexImg.png'),
 					type: '#美食',
 					content: '龙虎烩，老鼠份你敢来尝尝吗？切换标签之前的钩子，若返回 false 或者返回 Promise 且被 reject，则阻止切换。',
@@ -54,7 +54,7 @@
 					useName: 'zjzhi',
 					num: '0',
 					time: '2018-06-25 09:54'
-				},{
+				}, {
 					imgSrc: require('../../static/img/indexImg.png'),
 					type: '#美食',
 					content: '龙虎烩，老鼠份你敢来尝尝吗？切换标签之前的钩子，若返回 false 或者返回 Promise 且被 reject，则阻止切换。',
@@ -62,7 +62,7 @@
 					useName: 'zjzhi',
 					num: '0',
 					time: '2018-06-25 09:54'
-				},{
+				}, {
 					imgSrc: require('../../static/img/indexImg.png'),
 					type: '#美食',
 					content: '龙虎烩，老鼠份你敢来尝尝吗？切换标签之前的钩子，若返回 false 或者返回 Promise 且被 reject，则阻止切换。',
@@ -70,7 +70,7 @@
 					useName: 'zjzhi',
 					num: '0',
 					time: '2018-06-25 09:54'
-				},{
+				}, {
 					imgSrc: require('../../static/img/indexImg.png'),
 					type: '#美食',
 					content: '龙虎烩，老鼠份你敢来尝尝吗？切换标签之前的钩子，若返回 false 或者返回 Promise 且被 reject，则阻止切换。',
@@ -78,7 +78,7 @@
 					useName: 'zjzhi',
 					num: '0',
 					time: '2018-06-25 09:54'
-				},{
+				}, {
 					imgSrc: require('../../static/img/indexImg.png'),
 					type: '#美食',
 					content: '龙虎烩，老鼠份你敢来尝尝吗？切换标签之前的钩子，若返回 false 或者返回 Promise 且被 reject，则阻止切换。',
@@ -95,7 +95,7 @@
 	};
 </script>
 
-<style>
+<style scoped>
 	.lifeCircleList {
 		width: 147px;
 		margin-bottom: 10px;
@@ -104,6 +104,7 @@
 	
 	.lifeCircleList:nth-child(2n-1) {
 		margin-right: 10px;
+		margin-left: 7px;
 	}
 	
 	.lifeCircleList .indexImg {
@@ -112,30 +113,37 @@
 	
 	.lifeCircleList .title {
 		font-size: 12px;
+		display: -webkit-box;
 		overflow: hidden;
 		text-overflow: ellipsis;
-		white-space: nowrap;
-		color:#040404;
+		-webkit-line-clamp: 2;
+		-webkit-box-orient: vertical;
+		color: #040404;
+		margin: 10px 0;
+		line-height: 20px;
 	}
-	.lifeCircleList .title span{
+	
+	.lifeCircleList .title span {
 		color: #4d5c90;
 	}
 	
+	.lifeCircleList .author {
+		margin: 10px 0;
+	}
+	
 	.lifeCircleList .author img {
+		float: left;
 		width: 38px;
 		height: 33px;
 		border-radius: 50%;
 		vertical-align: middle;
+		margin-right: 10px;
 	}
 	
 	.lifeCircleList .author .userName {
-		font-size: 16px;
+		font-size: 14px;
 		color: #262626;
 		line-height: 38px;
-	}
-	
-	.lifeCircleList .author i {
-		font-size: 25px;
 	}
 	
 	.lifeCircleList .author .listCollect {
@@ -144,12 +152,14 @@
 		height: 38px;
 		line-height: 38px;
 		color: #acacac;
+		font-size: 14px;
 	}
 	
 	a {
 		text-decoration: none;
 	}
-	li{
+	
+	li {
 		list-style: none;
 	}
 </style>
