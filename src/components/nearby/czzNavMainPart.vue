@@ -3,7 +3,7 @@
 		<img :src="imgSrc.src">
 		<p>{{imgSrc.title}}</p>
 		<p><span>人气{{imgSrc.hot}}</span><span>{{imgSrc.kind}}</span></p>
-		<p :style="{overflow:'hidden'}"><span :style="{float:'left',width:'70%'}">商家备注<i :style="{float:'right'}">购买</i></span><span :style="{float:'right'}">查看全部&gt;</span></p>
+		<p :style="{overflow:'hidden'}"><span :style="{float:'left',width:'70%'}">商家备注<i :style="{float:'right'}">购买</i></span><span :style="{float:'right',width:'25%'}">查看全部&gt;</span></p>
 		<p>点餐</p>
 	</div>
 </template>
@@ -39,7 +39,7 @@
 	.czzNavMainPart p:nth-of-type(3) span{
 		height: 45px;
 		line-height: 45px;
-		font-size: 16px;
+		font-size: 12px;
 		background-color: #FFF5F5;
 		color:#FF6342;
 		padding: 0 10px;
