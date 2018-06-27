@@ -1,12 +1,17 @@
 import Vue from 'vue'
 import Router from 'vue-router'
 import HelloWorld from '@/components/HelloWorld'
+
 import liftCircle from '../pages/liftCircle.vue'
 import liftDetails from '../pages/liftDetails.vue'
+
+import nearby from '@/components/nearby/nearby'
+
 
 Vue.use(Router)
 
 export default new Router({
+
 	mode: 'history',
 	routes: [{
 		path: '/',
@@ -20,5 +25,11 @@ export default new Router({
 		path: '/liftDetails',
 		name: 'liftDetails',
 		component: liftDetails
-	}]
+	},{
+      path: '/nearby',
+      name: 'nearby',
+      component: nearby
+  	}]
+
 })
+
