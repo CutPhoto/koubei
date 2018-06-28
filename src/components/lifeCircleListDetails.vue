@@ -3,9 +3,9 @@
 		<div class="details" v-for="del in lifeCircleListArr">
 			{{getlistArr}}
 			<div class="detailsTop">
-				<a href="/liftCircle"><i class="el-icon-arrow-left goBack"></i></a>
+				<i class="el-icon-arrow-left goBack" @click="showDetails"></i>
 				<i class="el-icon-news toShare"></i>
-				<img :src="del.imgSrc" />
+				<img :src="del.imgSrc?del.imgSrc:del.imgSrcArr[0]" />
 				<div class="detailsImgPages">
 					<span>1</span>/<span>1</span>
 				</div>
@@ -43,14 +43,15 @@
 		},
 		computed: {
 			getlistArr() {
-				this.bus.$on('showListDetails', (data) => {
-					console.log(asdasd)
-					this.lifeCircleListArr = data.lifeCircleListArr;
+				this.bus.$on('showListDetails', (item) => {
+					this.lifeCircleListArr.splice(0,1,item);
 				})
 			}
 		},
 		methods: {
-
+			showDetails(){
+				this.$emit('toShow',false);
+			}
 		}
 	};
 </script>
