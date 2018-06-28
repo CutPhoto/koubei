@@ -8,14 +8,14 @@
 				<br />
 				<time>{{list.time}}</time>
 			</div>
-			<a href="/liftDetails">
+			<div @click="showDetails(list)">
 				<ul>
 					<li v-for="imgSrc in list.imgSrcArr"><img :src="imgSrc" /></li>
 				</ul>
 				<h2>
 					<span>{{list.type}}</span>{{list.content}}
 				</h2>
-			</a>
+			</div>
 			<h3><span><i class="el-icon-location-outline">1</i><i class="el-icon-star-off">1</i></span></h3>
 		</div>
 	</div>
@@ -24,53 +24,17 @@
 <script>
 	export default {
 		name: 'foucsList',
+		props:['foucsListArr'],
 		data() {
 			return {
-				foucsListArr: [{
-					imgSrcArr: [require('../../static/img/indexImg.png'), require('../../static/img/indexImg.png'), require('../../static/img/indexImg.png')],
-					type: '#美食',
-					content: '龙虎烩，老鼠份你敢来尝尝吗？切换标签之前的钩子，若返回 false 或者返回 Promise 且被 reject，则阻止切换。',
-					userImgSrc: require('../../static/img/rentouxiang.png'),
-					useName: '苏梓萌cando',
-					num: '0',
-					time: '4天前'
-				},{
-					imgSrcArr: [require('../../static/img/indexImg.png'), require('../../static/img/indexImg.png'), require('../../static/img/indexImg.png')],
-					type: '#美食',
-					content: '龙虎烩，老鼠份你敢来尝尝吗？切换标签之前的钩子，若返回 false 或者返回 Promise 且被 reject，则阻止切换。',
-					userImgSrc: require('../../static/img/rentouxiang.png'),
-					useName: '苏梓萌cando',
-					num: '0',
-					time: '4天前'
-				},{
-					imgSrcArr: [require('../../static/img/indexImg.png'), require('../../static/img/indexImg.png'), require('../../static/img/indexImg.png')],
-					type: '#美食',
-					content: '龙虎烩，老鼠份你敢来尝尝吗？切换标签之前的钩子，若返回 false 或者返回 Promise 且被 reject，则阻止切换。',
-					userImgSrc: require('../../static/img/rentouxiang.png'),
-					useName: '苏梓萌cando',
-					num: '0',
-					time: '4天前'
-				},{
-					imgSrcArr: [require('../../static/img/indexImg.png'), require('../../static/img/indexImg.png'), require('../../static/img/indexImg.png')],
-					type: '#美食',
-					content: '龙虎烩，老鼠份你敢来尝尝吗？切换标签之前的钩子，若返回 false 或者返回 Promise 且被 reject，则阻止切换。',
-					userImgSrc: require('../../static/img/rentouxiang.png'),
-					useName: '苏梓萌cando',
-					num: '0',
-					time: '4天前'
-				},{
-					imgSrcArr: [require('../../static/img/indexImg.png'), require('../../static/img/indexImg.png'), require('../../static/img/indexImg.png')],
-					type: '#美食',
-					content: '龙虎烩，老鼠份你敢来尝尝吗？切换标签之前的钩子，若返回 false 或者返回 Promise 且被 reject，则阻止切换。',
-					userImgSrc: require('../../static/img/rentouxiang.png'),
-					useName: '苏梓萌cando',
-					num: '0',
-					time: '4天前'
-				}]
+				
 			};
 		},
 		methods: {
-
+			showDetails(item){
+				this.$emit('toShow',true);
+				this.bus.$emit('showListDetails', item)
+			}
 		}
 	};
 </script>

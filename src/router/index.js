@@ -3,11 +3,12 @@ import Router from 'vue-router'
 import HelloWorld from '@/components/HelloWorld'
 
 import liftCircle from '../pages/liftCircle.vue'
-import liftDetails from '../pages/liftDetails.vue'
+import shopDetails from '@/pages/shopDetails.vue'
 
 import nearby from '@/components/nearby/nearby'
 
 import nearbyDetail from '@/components/nearbyDetail/nearbyDetail'
+
 
 Vue.use(Router)
 
@@ -22,10 +23,6 @@ export default new Router({
 		path: '/liftCircle',
 		name: 'liftCircle',
 		component: liftCircle
-	}, {
-		path: '/liftDetails',
-		name: 'liftDetails',
-		component: liftDetails
 	},{
       path: '/nearby',
       name: 'nearby',
@@ -34,6 +31,10 @@ export default new Router({
       path: '/nearbyDetail',
       name: 'nearbyDetail',
       component: nearbyDetail
+  	},{
+      path: '/shopDetails',
+      name: 'shopDetails',
+      component: shopDetails
   	}]
 
 })

@@ -1,36 +1,155 @@
 <template>
-		<lifeCircleHeader class="liftCircleIndex">
+	<div>
+		<lifeCircleHeader class="liftCircleIndex" v-show="!isShowDetails">
 			<div slot="focus">
 				<h2 class="liftCircleIndexTitle">关注感兴趣的人，丰富你的动态</h2>
-				<foucsList/>
+				<foucsList :foucsListArr="foucsListArr" @toShow="getBool"/>
 
 			</div>
 			<div slot="recommend">
 				<a href="#" class="liftCircleHref"><img src="../../static/img/liftCirclehuati.png"/></a>
-				<lifeCircleList class="liftCircleMain"/>
+				<lifeCircleList class="liftCircleMain" :lifeCircleArr = "lifeCircleListArr" @toShow="getBool"/>
 
 			</div>
 		</lifeCircleHeader>
+		<lifeCircleListDetails v-show="isShowDetails" @toShow="getBool">
+			<div slot="messageBoard">
+				<messageBoard/>
+			</div>
+		</lifeCircleListDetails>
+	</div>	
 </template>
 
 <script>
 	import lifeCircleList from '../components/lifeCircleList.vue'
 	import lifeCircleHeader from '../components/lifeCircleHeader.vue'
 	import foucsList from '../components/foucsList.vue'
+	import lifeCircleListDetails from '../components/lifeCircleListDetails.vue'
+	import messageBoard from '../components/messageBoard.vue'
 
 	export default {
 		data() {
 			return {
-				isShowDetails: false
+				isShowDetails: false,
+				lifeCircleListArr: [{
+					imgSrc: require('../../static/img/indexImg.png'),
+					type: '#美食1111111',
+					content: '龙虎烩，老鼠份你敢来尝尝吗？切换标签之前的钩子，若返回 false 或者返回 Promise 且被 reject，则阻止切换。',
+					userImgSrc: require('../../static/img/rentouxiang.png'),
+					useName: 'zjzhi',
+					num: '0',
+					time: '2018-06-25 09:54'
+				}, {
+					imgSrc: require('../../static/img/indexImg.png'),
+					type: '#美食',
+					content: '龙虎烩，老鼠份你敢来尝尝吗？切换标签之前的钩子，若返回 false 或者返回 Promise 且被 reject，则阻止切换。',
+					userImgSrc: require('../../static/img/rentouxiang.png'),
+					useName: 'zjzhi',
+					num: '0',
+					time: '2018-06-25 09:54'
+				}, {
+					imgSrc: require('../../static/img/indexImg.png'),
+					type: '#美食',
+					content: '龙虎烩，老鼠份你敢来尝尝吗？切换标签之前的钩子，若返回 false 或者返回 Promise 且被 reject，则阻止切换。',
+					userImgSrc: require('../../static/img/rentouxiang.png'),
+					useName: 'zjzhi',
+					num: '0',
+					time: '2018-06-25 09:54'
+				}, {
+					imgSrc: require('../../static/img/indexImg.png'),
+					type: '#美食',
+					content: '龙虎烩，老鼠份你敢来尝尝吗？切换标签之前的钩子，若返回 false 或者返回 Promise 且被 reject，则阻止切换。',
+					userImgSrc: require('../../static/img/rentouxiang.png'),
+					useName: 'zjzhi',
+					num: '0',
+					time: '2018-06-25 09:54'
+				}, {
+					imgSrc: require('../../static/img/indexImg.png'),
+					type: '#美食',
+					content: '龙虎烩，老鼠份你敢来尝尝吗？切换标签之前的钩子，若返回 false 或者返回 Promise 且被 reject，则阻止切换。',
+					userImgSrc: require('../../static/img/rentouxiang.png'),
+					useName: 'zjzhi',
+					num: '0',
+					time: '2018-06-25 09:54'
+				}, {
+					imgSrc: require('../../static/img/indexImg.png'),
+					type: '#美食',
+					content: '龙虎烩，老鼠份你敢来尝尝吗？切换标签之前的钩子，若返回 false 或者返回 Promise 且被 reject，则阻止切换。',
+					userImgSrc: require('../../static/img/rentouxiang.png'),
+					useName: 'zjzhi',
+					num: '0',
+					time: '2018-06-25 09:54'
+				}, {
+					imgSrc: require('../../static/img/indexImg.png'),
+					type: '#美食',
+					content: '龙虎烩，老鼠份你敢来尝尝吗？切换标签之前的钩子，若返回 false 或者返回 Promise 且被 reject，则阻止切换。',
+					userImgSrc: require('../../static/img/rentouxiang.png'),
+					useName: 'zjzhi',
+					num: '0',
+					time: '2018-06-25 09:54'
+				}, {
+					imgSrc: require('../../static/img/indexImg.png'),
+					type: '#美食',
+					content: '龙虎烩，老鼠份你敢来尝尝吗？切换标签之前的钩子，若返回 false 或者返回 Promise 且被 reject，则阻止切换。',
+					userImgSrc: require('../../static/img/rentouxiang.png'),
+					useName: 'zjzhi',
+					num: '0',
+					time: '2018-06-25 09:54'
+				}],
+				foucsListArr: [{
+					imgSrcArr: [require('../../static/img/indexImg.png'), require('../../static/img/indexImg.png'), require('../../static/img/indexImg.png')],
+					type: '#美食',
+					content: '龙虎烩，老鼠份你敢来尝尝吗？切换标签之前的钩子，若返回 false 或者返回 Promise 且被 reject，则阻止切换。',
+					userImgSrc: require('../../static/img/rentouxiang.png'),
+					useName: '苏梓萌cando',
+					num: '0',
+					time: '4天前'
+				},{
+					imgSrcArr: [require('../../static/img/indexImg.png'), require('../../static/img/indexImg.png'), require('../../static/img/indexImg.png')],
+					type: '#美食',
+					content: '龙虎烩，老鼠份你敢来尝尝吗？切换标签之前的钩子，若返回 false 或者返回 Promise 且被 reject，则阻止切换。',
+					userImgSrc: require('../../static/img/rentouxiang.png'),
+					useName: '苏梓萌cando',
+					num: '0',
+					time: '4天前'
+				},{
+					imgSrcArr: [require('../../static/img/indexImg.png'), require('../../static/img/indexImg.png'), require('../../static/img/indexImg.png')],
+					type: '#美食',
+					content: '龙虎烩，老鼠份你敢来尝尝吗？切换标签之前的钩子，若返回 false 或者返回 Promise 且被 reject，则阻止切换。',
+					userImgSrc: require('../../static/img/rentouxiang.png'),
+					useName: '苏梓萌cando',
+					num: '0',
+					time: '4天前'
+				},{
+					imgSrcArr: [require('../../static/img/indexImg.png'), require('../../static/img/indexImg.png'), require('../../static/img/indexImg.png')],
+					type: '#美食',
+					content: '龙虎烩，老鼠份你敢来尝尝吗？切换标签之前的钩子，若返回 false 或者返回 Promise 且被 reject，则阻止切换。',
+					userImgSrc: require('../../static/img/rentouxiang.png'),
+					useName: '苏梓萌cando',
+					num: '0',
+					time: '4天前'
+				},{
+					imgSrcArr: [require('../../static/img/indexImg.png'), require('../../static/img/indexImg.png'), require('../../static/img/indexImg.png')],
+					type: '#美食',
+					content: '龙虎烩，老鼠份你敢来尝尝吗？切换标签之前的钩子，若返回 false 或者返回 Promise 且被 reject，则阻止切换。',
+					userImgSrc: require('../../static/img/rentouxiang.png'),
+					useName: '苏梓萌cando',
+					num: '0',
+					time: '4天前'
+				}]
 			}
 		},
 		components: {
 			lifeCircleList,
 			lifeCircleHeader,
-			foucsList
+			foucsList,
+			lifeCircleListDetails,
+			messageBoard
 		},
 		methods: {
-
+			getBool(msg){
+				this.isShowDetails=msg;
+			}
 		}
 	}
 </script>
