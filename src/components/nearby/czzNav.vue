@@ -1,5 +1,5 @@
 <template>
-	<div class="czzSpot">
+	<div class="czzNav">
 		{{ulWidth}}
 		{{acceptTouchExit}}
 		{{acceptAllArrows}}
@@ -38,6 +38,7 @@
 					if(data.index){
 						this.arrows = data.arrows;
 						this.page = data.index;
+						this.changePage(data.index)
 			
 					}else{
 						this.arrows = data.index;
@@ -60,6 +61,7 @@
 				if(data <= 2){
 					this.ulPosition = 0
 				}
+				
 				//事件分发至czzNavMain
 				this.bus.$emit('czzNavMain',{changePageIndex:data})
 			},
@@ -102,20 +104,20 @@
 	}
 </script>
 <style type="text/css" scoped>
-	.czzSpot{
+	.czzNav{
 		height: 45px;
 		position: relative;
 		overflow: hidden;
 		line-height: 45px;
 		
 	}
-	.czzSpot ul{
+	.czzNav ul{
 		overflow: hidden;
 		position: absolute;
 		height: 45px;
 
 	}
-	.czzSpot ul li{
+	.czzNav ul li{
 		float:left;
 		padding: 6px 0 6px 13px;
 		

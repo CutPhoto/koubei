@@ -7,6 +7,7 @@ import liftDetails from '../pages/liftDetails.vue'
 
 import nearby from '@/components/nearby/nearby'
 
+import nearbyDetail from '@/components/nearbyDetail/nearbyDetail'
 
 Vue.use(Router)
 
@@ -29,6 +30,10 @@ export default new Router({
       path: '/nearby',
       name: 'nearby',
       component: nearby
+  	},{
+      path: '/nearbyDetail',
+      name: 'nearbyDetail',
+      component: nearbyDetail
   	}]
 
 })

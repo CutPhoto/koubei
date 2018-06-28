@@ -1,10 +1,11 @@
 <template>
-	<div id="czzNearby" @click = "allArrowsFalse">
-		<czzHeader />
-		<czzSpot />
-		<czzNav :czzNavList="czzNavList" />
-		<czzNavMain :czzNavList="czzNavList"/>
-		
+	<div id="czzNearby" @touchstart = "allArrowsFalse" @click.native="changeScroll()">
+		<czzHeader :style="{height:'60px'}"/>
+		<div :class="{mainContent:true}">
+			<czzSpot :style="{ceiling:true}"/>
+			<czzNav :czzNavList="czzNavList" />
+			<czzNavMain :czzNavList="czzNavList" />
+		</div>
 	</div>
 </template>
 <script type="text/javascript">
@@ -97,6 +98,7 @@
 								{maintitle:"肯德基",mainsrc0:require('	../../../static/img/mainsrc0.png'),hot:92,kind:'西式快餐|人均30元'}
 							]}
 						],
+						ceiling:false
 				
 			}
 		},
@@ -109,7 +111,17 @@
 
 					this.bus.$emit('allArrows',{arows:false})
 				}
+			},
+			changeScroll(){console.log(document.getElementById(czzNearby))
+				console.log(111)
+				// if(window.scrollY >= 60){
+				// 	this.ceiling = true
+				// }
+				// window.addEventListener('scroll',()=>{console.log(window.scrollY)})
 			}
+		},
+		computed:{
+			
 		}
 	}
 </script>
@@ -119,7 +131,22 @@
 		margin: 0;
 		padding: 0;
 	}
+	#app{
+		height: 100%;
+	}
 	#czzNearby{
-		
+		width: 100%;
+		height: 100%;
+		display: flex;
+		flex-direction:column;
+	}
+	.ceiling{
+		position: fixed;
+		top: 60px;
+		z-index: 1000;
+	}
+	.mainContent{
+		flex:1;
+		overflow-x: hidden;
 	}
 </style>
