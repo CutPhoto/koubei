@@ -13,8 +13,6 @@
 		<shopOnSale :goodsArr="goodsOnSaleArr" id="OnSale"/>
 		<messageBoard class="messageBorrdInShop" id="message"/>
 	</div>
-	
-	
 </template>
 
 <script>
