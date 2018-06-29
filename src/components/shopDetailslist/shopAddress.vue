@@ -32,6 +32,7 @@
 		border-top: 1px solid #ccc;
 		margin: 10px 0;
 	}
+	
 	.shopAddress .el-icon-location-outline {
 		display: inline-block;
 		width: 50px;
@@ -41,16 +42,19 @@
 		line-height: 50px;
 		text-align: center;
 	}
+	
 	.shopAddress .shopAddressDetail {
 		width: 170px;
 		height: 50px;
 		float: left;
 		font-size: 16px;
 	}
+	
 	.shopAddress ul {
 		float: right;
 		padding-right: 10px;
 	}
+	
 	.shopAddress ul li {
 		float: left;
 		height: 24px;
@@ -60,9 +64,11 @@
 		height: 50px;
 		padding-top: 6px;
 	}
+	
 	.shopAddress ul li i {
 		font-size: 24px;
 	}
+	
 	.shopAddress ul li:first-child {
 		padding-right: 10px;
 		border-right: 1px solid #ccc;
