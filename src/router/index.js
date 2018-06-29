@@ -9,11 +9,11 @@ import nearby from '@/components/nearby/nearby'
 
 import nearbyDetail from '@/components/nearbyDetail/nearbyDetail'
 
-
+import orderCommit from '@/components/orderCommit/orderCommit'
 Vue.use(Router)
 
 export default new Router({
-
+ 
 	mode: 'history',
 	routes: [{
 		path: '/',
@@ -35,7 +35,11 @@ export default new Router({
       path: '/shopDetails',
       name: 'shopDetails',
       component: shopDetails
-  	}]
+  	},{
+      path: '/orderCommit',
+      name: 'orderCommit',
+      component: orderCommit
+    }]
 
 })
 
