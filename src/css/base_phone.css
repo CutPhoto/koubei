@@ -24,3 +24,9 @@ a:hover{
 	text-decoration:underline;}
 i{font-style:normal;}
 *{box-sizing:border-box;}
+.fr{
+	float: right;
+}
+.fl{
+	float: left;
+}

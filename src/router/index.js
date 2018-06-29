@@ -4,6 +4,7 @@ import HelloWorld from '@/components/HelloWorld'
 
 import liftCircle from '../pages/liftCircle.vue'
 import shopDetails from '@/pages/shopDetails.vue'
+import homeLiRen from '@/pages/homeLiRen.vue'
 
 import nearby from '@/components/nearby/nearby'
 
@@ -19,7 +20,7 @@ export default new Router({
 		path: '/',
 		name: 'HelloWorld',
 		component: HelloWorld
-	}, {
+	},{
 		path: '/liftCircle',
 		name: 'liftCircle',
 		component: liftCircle
@@ -39,7 +40,11 @@ export default new Router({
       path: '/orderCommit',
       name: 'orderCommit',
       component: orderCommit
-    }]
+    },{
+  		path:'/homeLiRen',
+  		name:'homeLiRen',
+  		component:homeLiRen
+  	}]
 
 })
 

@@ -6,12 +6,12 @@
 		<shopAddress :shopDetail="shopDetails"/>
 		<koubeiExclusive/>
 		<ul class="shopDetailsNav">
-			<li><a	href="#">优惠</a></li>
-			<li><a	href="#">评价</a></li>
+			<li><a	href="#OnSale">优惠</a></li>
+			<li><a	href="#message">评价</a></li>
 			<li><a	href="#">商家信息</a></li>
 		</ul>
-		<shopOnSale :goodsArr="goodsOnSaleArr"/>
-		<messageBoard class="messageBorrdInShop"/>
+		<shopOnSale :goodsArr="goodsOnSaleArr" id="OnSale"/>
+		<messageBoard class="messageBorrdInShop" id="message"/>
 	</div>
 	
 	
