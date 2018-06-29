@@ -4,6 +4,7 @@ import HelloWorld from '@/components/HelloWorld'
 
 import liftCircle from '../pages/liftCircle.vue'
 import shopDetails from '@/pages/shopDetails.vue'
+import homeLiRen from '@/pages/homeLiRen.vue'
 
 import nearby from '@/components/nearby/nearby'
 
@@ -35,6 +36,10 @@ export default new Router({
       path: '/shopDetails',
       name: 'shopDetails',
       component: shopDetails
+  	},{
+  		path:'/homeLiRen',
+  		name:'homeLiRen',
+  		component:homeLiRen
   	}]
 
 })

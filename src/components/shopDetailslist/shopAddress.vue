@@ -41,7 +41,7 @@
 		display: inline-block;
 		width: 50px;
 		height: 50px;
-		font-size: 32px;
+		font-size: 28px;
 		float: left;
 		line-height: 50px;
 		text-align: center;
@@ -51,7 +51,7 @@
 		width: 170px;
 		height: 50px;
 		float: left;
-		font-size: 18px;
+		font-size: 16px;
 	}
 	
 	.shopAddress ul {
