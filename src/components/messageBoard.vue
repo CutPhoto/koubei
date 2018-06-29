@@ -98,5 +98,7 @@
 		display: inline-block;
 		margin-top: 10px;
 		line-height: 30px;
+		font-size: 14px;
+		margin-left: 10px;
 	}
 </style>

@@ -28,10 +28,17 @@
 <style scoped>
 	.shopDetailsTop{
 		width: 100%;
+		padding-left:10px ;
 		color: red;
-		font-size: 22px;
+		font-size: 26px;
+		color: #444444;
+		line-height: 52px;
 	}
 	.shopDetailsTop span{
 		float: right;
+		
+	}
+	.shopDetailsTop span i{
+		margin-right:7px;
 	}
 </style>
