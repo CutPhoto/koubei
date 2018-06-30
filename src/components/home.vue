@@ -13,7 +13,6 @@
 			<xaimei></xaimei>
 			<xrenqi></xrenqi>
 			<xpanel></xpanel>
-			<dddd></dddd>
 		</div>
 		<!--<xtarbar></xtarbar>-->
 		
@@ -33,7 +32,6 @@
 	import xaimei from './xaimei/xaimei'
 	import xrenqi from './xrenqi/xrenqi'
 	import xpanel from './xpanel/xpanel'
-	import dddd from './dddd'
 	
 	
 	
@@ -51,8 +49,7 @@
 			xzhenxuan,
 			xaimei,
 			xrenqi,
-			xpanel,
-			dddd
+			xpanel
 		}
 	}
 </script>

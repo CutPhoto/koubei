@@ -26,6 +26,16 @@ import Swiper from 'swiper'
 import '../node_modules/swiper/dist/css/swiper.min.css'
 import weui from 'weui'
 import './components/animate.css'
+
+import $ from './jquery-3.3.1.js'
+import "./css/base_phone.css"
+
+
+
+
+
+
+
 Vue.use(ElementUI)
 Vue.config.productionTip = false
 let bus = new Vue()

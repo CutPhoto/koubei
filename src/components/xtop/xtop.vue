@@ -59,7 +59,7 @@
 		background: orangered;
 		width: 100%;
 		overflow: hidden;
-		padding-top:20px;
+		padding-top:5px;
 	}
 	.top a{
 		color:white;
