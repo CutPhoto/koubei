@@ -2,11 +2,13 @@
 	<div class="czzNavMain" :data-computedWidth = "czzNavMainbigBoxWidth" :data-computedIndex = "czzNavIndex">
 		<div class="czzNavMainbigBox" :style = "{width:boxWidth+'px',transform:`translate(${left}px,0)`}">
 			<div v-for="(d,dIndex) in czzNavList" :style = "{width:divWidth+'px',padding:'10px',backgroundColor:'#ccc'}">
-				<czzNavMainPart  :imgSrc = '{src:d.mainMsg[dIndex].mainsrc0,
-											hot:d.mainMsg[dIndex].hot,
-											kind:d.mainMsg[dIndex].kind,
-											title:d.mainMsg[dIndex].maintitle
-				}' v-for = "cN in d.mainMsg" />	
+				<a href="/shopDetails">
+					<czzNavMainPart  :imgSrc = '{src:d.mainMsg[dIndex].mainsrc0,
+												hot:d.mainMsg[dIndex].hot,
+												kind:d.mainMsg[dIndex].kind,
+												title:d.mainMsg[dIndex].maintitle
+					}' v-for = "cN in d.mainMsg" />	
+				</a>
 			</div>
 		</div>
 	</div>

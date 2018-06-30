@@ -1,5 +1,5 @@
 <template>
-	<div>
+	<div :style="{position:'fixed',bottom:'0'}">
 		<span><i></i>收藏</span><span>立即购买</span>	
 	</div>
 </template>
@@ -8,6 +8,7 @@
 </script>
 <style type="text/css" scoped>
 	div{
+		width: 100%;
 		height: 60px;
 	}
 	span{

@@ -19,9 +19,12 @@ body{
 	color:#3e3e3e;}
 a{
 	text-decoration:none;
-	color:#0dc441;}
+	color: #3e3e3e;
+}
 a:hover{
-	text-decoration:underline;}
+	text-decoration:none;
+	color:#000;
+}
 i{font-style:normal;}
 *{box-sizing:border-box;}
 .fr{

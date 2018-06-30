@@ -23,7 +23,7 @@
 				</el-row>	
 			</ul>
 		</div>	
-		<div class="detailDivFour">
+		<div class="detailDivFour" :style="{marginBottom:'60px'}">
 			<h3>更多本店宝贝详情</h3>
 			<shopCard class="shopCard" v-for = "card in cardList"/>
 		</div>

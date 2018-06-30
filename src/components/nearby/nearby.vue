@@ -5,6 +5,7 @@
 			<czzSpot :style="{ceiling:true}"/>
 			<czzNav :czzNavList="czzNavList" />
 			<czzNavMain :czzNavList="czzNavList" />
+			<xtarbar />
 		</div>
 	</div>
 </template>
@@ -13,6 +14,7 @@
 	import czzSpot from './czzSpot'
 	import czzNav from './czzNav' 
 	import czzNavMain from './czzNavMain' 
+	import xtarbar from '../xtarbar/xtarbar'
 	export default{
 		data(){
 			return {
@@ -102,7 +104,7 @@
 				
 			}
 		},
-		components:{ czzHeader, czzSpot, czzNav , czzNavMain },
+		components:{ czzHeader, czzSpot, czzNav , czzNavMain , xtarbar },
 		methods:{
 			allArrowsFalse(e){
 				if(e.target.tagName=='I'){

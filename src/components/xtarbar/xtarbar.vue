@@ -2,7 +2,7 @@
 	<div class="weui-tabbar" :style="{
     height:'53px'
     }">
-                <a href="javascript:;" class="weui-tabbar__item weui-bar__item_on">
+                <a href="../home" class="weui-tabbar__item weui-bar__item_on">
                     <img src="../../assets/bottom1.jpg" alt="" class="weui-tabbar__icon">
                     <p class="weui-tabbar__label" style="color:orange">首页</p>
                 </a>
