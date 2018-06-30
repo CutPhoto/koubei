@@ -1,8 +1,10 @@
 <template>
 	<div>
-		<div class="lifeCircleList" v-for="item in lifeCircleListArr">
-			<img class="indexImg" :src="item.imgSrc" />
-			<h2 class="title"><span>{{item.type}}</span>{{item.content}}</h2>
+		<div class="lifeCircleList" v-for="item in lifeCircleArr">
+			<div @click="showDetails(item)">
+				<img class="indexImg" :src="item.imgSrc" />
+				<h2 class="title"><span>{{item.type}}</span>{{item.content}}</h2>
+			</div>
 			<div class="author">
 				<img :src="item.userImgSrc" />
 				<span class="userName">{{item.useName}}</span>
@@ -18,65 +20,88 @@
 <script>
 	export default {
 		name: 'lifeCircleList',
+		props:['lifeCircleArr'],
 		data() {
 			return {
-				lifeCircleListArr: [{
-					imgSrc: require('../../static/img/indexImg.png'),
-					type: '#美食',
-					content: '龙虎烩，老鼠份你敢来尝尝吗？切换标签之前的钩子，若返回 false 或者返回 Promise 且被 reject，则阻止切换。',
-					userImgSrc: require('../../static/img/rentouxiang.png'),
-					useName: 'zjzhi',
-					num: '0',
-					time: '2018-06-25 09:54'
-				}]
 			};
 		},
+		computed:{
+			
+		},
 		methods: {
-			showDetails() {
+			showDetails(item){
+				this.$emit('toShow',true);
+				this.bus.$emit('showListDetails', item);
 			}
 		}
 	};
 </script>
 
-<style>
+<style scoped>
 	.lifeCircleList {
-		width: 496px;
-		margin-bottom: 30px;
+		width: 147px;
+		margin-bottom: 10px;
+		float: left;
 	}
 	
 	.lifeCircleList:nth-child(2n-1) {
-		margin-right: 30px;
+		margin-right: 10px;
+		margin-left: 7px;
 	}
 	
 	.lifeCircleList .indexImg {
-		width: 496px;
+		width: 147px;
 	}
 	
 	.lifeCircleList .title {
-		font-size: 36px;
+		font-size: 12px;
+		display: -webkit-box;
+		overflow: hidden;
+		text-overflow: ellipsis;
+		-webkit-line-clamp: 2;
+		-webkit-box-orient: vertical;
+		color: #040404;
+		margin: 10px 0;
+		line-height: 20px;
+	}
+	
+	.lifeCircleList .title span {
+		color: #4d5c90;
+	}
+	
+	.lifeCircleList .author {
+		margin: 10px 0;
 	}
 	
 	.lifeCircleList .author img {
-		width: 68px;
-		height: 68px;
+		float: left;
+		width: 38px;
+		height: 33px;
 		border-radius: 50%;
+		vertical-align: middle;
+		margin-right: 10px;
 	}
 	
 	.lifeCircleList .author .userName {
-		font-size: 33px;
+		font-size: 14px;
 		color: #262626;
-		line-height: 68px;
-	}
-	
-	.lifeCircleList .author i {
-		font-size: 45px;
+		line-height: 38px;
 	}
 	
 	.lifeCircleList .author .listCollect {
-		width: 126px;
+		/*width: 126px;*/
 		float: right;
-		height: 46px;
-		line-height: 46px;
+		height: 38px;
+		line-height: 38px;
 		color: #acacac;
+		font-size: 14px;
+	}
+	
+	a {
+		text-decoration: none;
+	}
+	
+	li {
+		list-style: none;
 	}
 </style>
