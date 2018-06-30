@@ -1,32 +1,63 @@
 <template>
 	<div class="chaozhi">
 		<div class="chaozhi_t">
-			<i></i><span>超值抢购</span><i></i>
+			<i></i><span>{{text}}</span><i></i>
 		</div>
 		<div class="chaozhi_c">
-			<img src="../../assets/chaozhi1.jpg" alt="" />
+			<img :src="img" alt="" />
 		</div>
 		<div class="chaozhi_b">
 			<div class="chaozhi_b_t">
-				<img src="../../assets/chaozhi2.jpg" alt="" />
-				<p>三个辣椒牛肉粉</p>
-				<p><span>10元</span><del>21元</del></p>
+				<img :src="commodity[0].src" alt="" />
+				<p v-text="commodity[0].name"></p>
+				<p><span v-text="commodity[0].price"></span><del v-text="commodity[0].del"></del></p>
 			</div>
 			<div class="chaozhi_b_c">
-				<img src="../../assets/chaozhi3.jpg" alt="" />
-				<p>藤野造型</p>
-				<p><span>29.90元</span><del>139元</del></p>
+				<img :src="commodity[1].src" alt="" />
+				<p v-text="commodity[1].name"></p>
+				<p><span v-text="commodity[1].price"></span><del v-text="commodity[1].del"></del></p>
 			</div>
 			<div class="chaozhi_b_b">
-				<img src="../../assets/chaozhi4.jpg" alt="" />
-				<p>三个辣椒牛肉粉</p>
-				<p><span>18元</span><del>36元</del></p>
+				<img :src="commodity[2].src" alt="" />
+				<p v-text="commodity[2].name"></p>
+				<p><span v-text="commodity[2].price"></span><del v-text="commodity[2].del"></del></p>
 			</div>
 		</div>
 	</div>
 </template>
 
 <script>
+	export default {
+		name:'xaimei',
+		data(){ 
+			return{
+				text:'潮玩惠',
+				img:require('../../assets/chaozhi1.jpg'),
+				commodity:[{
+					'id':16,
+					'name':'三个辣椒牛肉粉',
+					'names':'【心机染】...',
+					'src':require('../../assets/chaozhi2.jpg'),
+					'price':'199元',
+					'del':'888元'
+				},{
+					'id':17,
+					'name':'藤野造型',
+					'names':'49元，价值...',
+					'src':require('../../assets/chaozhi3.jpg'),
+					'price':'49元',
+					'del':'128元'
+				},{
+					'id':18,
+					'name':'藤野造型',
+					'names':'49元，价值...',
+					'src':require('../../assets/chaozhi4.jpg'),
+					'price':'49元',
+					'del':'128元'
+				}]
+			}
+		}
+	}
 </script>
 
 <style>

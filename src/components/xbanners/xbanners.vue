@@ -39,26 +39,31 @@
 					src: require('../../assets/banner6.jpg')
 				}],
 				
-				left:0
+				left:0,
+				width:0
+				
 			};
 		},
 		computed:{
 			A: function() {
+				this.width=`${document.documentElement.clientWidth}`;
+				console.log(this.width)
 		        setInterval(()=>{
-		        	if(this.left<=-1875){
+		        	
+		        	if(this.left<=(-this.width*6)){
 		        		this.left=0
 		        	}
-		        	this.left-=375
+		        	this.left-=this.width
 		        }, 2500)
 		    }
 		},
 		methods: {
     
-    B: function() {
-        console.log('1')
-    }
-}
-		
+	    B: function() {
+		    console.log('1')
+	    }
+	}
+			
 	};
 </script>
 
@@ -89,6 +94,5 @@
 		background-size: 100%;
 		height: 80px;
 		width:100%;
-		
 	}
 </style>

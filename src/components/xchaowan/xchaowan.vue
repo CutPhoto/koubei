@@ -4,18 +4,18 @@
 			<div class="chaowan_l_t">
 				<p>
 					<i class="el-icon-phone" style="color: pink;"></i>
-					 <span style="width: 40px; background: white;color: pink;">潮玩惠</span>
-					  <span >品质好货推荐</span>
+					 <span style="width: 40px; background: white;color: pink;">{{text1}}</span>
+					  <span >{{text2}}</span>
 				</p>
 			</div>
 			<div class="chaowan_l_b">
 				<div class="chaowan_l_b1">
-					<p>88潮牌造型</p>
-					<p>【心机染】...</p>
-					<p><span style="color:red">199元</span> <del>888元</del></p>
+					<p v-text="commodity[0].name"></p>
+					<p v-text="commodity[0].names"></p>
+					<p><span style="color:red" v-text="commodity[0].price">199元</span> <del v-text="commodity[0].del"></del></p>
 				</div>
 				<div class="chaowan_l_b2">
-					<img src="../../assets/chaowan1.jpg" alt="" />
+					<img :src="commodity[0].src" alt="" />
 				</div>
 			</div>
 		</div>
@@ -23,18 +23,18 @@
 			<div class="chaowan_r_t">
 				<p>
 					<i class="el-icon-phone" style="color: lightgreen;"></i>
-					 <span style="width: 40px; background: white;color: lightgreen;">潮玩惠</span>
-					  <span >品质好货推荐</span>
+					 <span style="width: 48px; background: white;color: lightgreen;">{{text3}}</span>
+					  <span ></span>
 				</p>
 			</div>
 			<div class="chaowan_r_b">
 				<div class="chaowan_r_b1">
-					<p>88潮牌造型</p>
-					<p>【心机染】...</p>
-					<span style="font-size: 14px;color:red;">199元</span> <del>888元</del>
+					<p v-text="commodity[1].name"></p>
+					<p v-text="commodity[1].names"></p>
+					<span style="font-size: 14px;color:red;" v-text="commodity[1].price"></span> <del v-text="commodity[1].del"></del>
 				</div>
 				<div class="chaowan_r_b2">
-					<img src="../../assets/chaowan2.jpg" alt="" />
+					<img :src="commodity[1].src" alt="" />
 				</div>
 			</div>
 		</div>
@@ -45,6 +45,31 @@
 </template>
 
 <script>
+	export default {
+		name:'xaimei',
+		data(){ 
+			return{
+				text1:'潮玩惠',
+				text2:'品质好货推荐',
+				text3:'附近优惠',
+				commodity:[{
+					'id':14,
+					'name':'88潮牌造型',
+					'names':'【心机染】...',
+					'src':require('../../assets/chaowan1.jpg'),
+					'price':'199元',
+					'del':'888元'
+				},{
+					'id':15,
+					'name':'藤野造型仅售',
+					'names':'49元，价值...',
+					'src':require('../../assets/chaowan2.jpg'),
+					'price':'49元',
+					'del':'128元'
+				}]
+			}
+		}
+	}
 </script>
 
 <style>

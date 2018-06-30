@@ -6,19 +6,19 @@
 		</div>
 		<div class="aimei_b">
 			<div class="aimei_b_l">
-				<img src="../../assets/aimei1.jpg" alt="" />
-				<p>清颜堂专业祛痘</p>
-				<p><span>9元</span><del>456元</del></p>
+				<img img :src="commodity[0].src" alt="" />
+				<p v-text="commodity[0].name"></p>
+				<p><span v-text="commodity[0].price"></span><del v-text="commodity[1].del"></del></p>
 			</div>
 			<div class="aimei_b_c">
-				<img src="../../assets/aimei2.jpg" alt="" />
-				<p>发意达脱发白...</p>
-				<p><span>41.90元</span><del>769元</del></p>
+				<img :src="commodity[1].src" alt="" />
+				<p v-text="commodity[1].name"></p>
+				<p><span v-text="commodity[1].price"></span><del v-text="commodity[1].del"></del></p>
 			</div>
 			<div class="aimei_b_r">
-				<img src="../../assets/aimei3.jpg" alt="" />
-				<p>藤野造型</p>
-				<p><span>98元</span><del>192元</del></p>
+				<img :src="commodity[2].src" alt="" />
+				<p v-text="commodity[2].name"></p>
+				<p><span v-text="commodity[2].price"></span><del v-text="commodity[2].del"></del></p>
 			</div>
 		</div>
 		<div class="aimei_k"></div>
@@ -26,6 +26,34 @@
 </template>
 
 <script>
+	export default {
+		name:'xaimei',
+		data(){
+			return{
+				text1:'爱美嗨玩',
+				text2:'买多次更省钱',
+				commodity:[{
+					'id':11,
+					'name':'清颜堂专业祛痘',
+					'src':require('../../assets/aimei1.jpg'),
+					'price':'9元',
+					'del':'456元'
+				},{
+					'id':12,
+					'name':'发意达脱发白...',
+					'src':require('../../assets/aimei2.jpg'),
+					'price':'41.90元',
+					'del':'769元'
+				},{
+					'id':13,
+					'name':'藤野造型',
+					'src':require('../../assets/aimei3.jpg'),
+					'price':'98元',
+					'del':'192元'
+				}]
+			}
+		}
+	}
 </script>
 
 <style>

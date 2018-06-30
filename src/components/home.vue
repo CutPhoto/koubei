@@ -14,7 +14,7 @@
 			<xrenqi></xrenqi>
 			<xpanel></xpanel>
 		</div>
-		<!--<xtarbar></xtarbar>-->
+		<xtarbar></xtarbar>
 		
 	</div>
 </template>
