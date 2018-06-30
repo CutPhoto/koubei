@@ -78,12 +78,14 @@
 	}
 	.top .top_r{
 		font-size: 16px;
-		margin-left:14px;
+		margin-right:10px;
+		float: right;
+		border-right:1px solid #cccccc;
 	}
 	.top .top_c{
 		font-size: 16px;
-		margin-left:147px;
-		border-right:1px solid #cccccc;
+		float: right;
+		
 	}
 	.top .top_b{
 		display: block;

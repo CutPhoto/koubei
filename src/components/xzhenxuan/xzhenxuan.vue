@@ -135,6 +135,12 @@
 		flex: 1;
 		padding: 5px;
 	}
+	.zhenxuan_r_b {
+		overflow: hidden;
+	}
+	.zhenxuan_l_b {
+		overflow: hidden;
+	}
 	
 	.zhenxuan_l_t p {
 		height: 40px;line-height: 16px;
@@ -168,13 +174,14 @@
 	}
 	
 	.zhenxuan_l_b2 {
-		float: left;
-		margin-top: 2px;
-		margin-left: 18px;
+		float: right;
+		margin-top: 10px;
+		margin-right: 10px;
+		width: 30%;
 	}
 	
 	.zhenxuan_l_b2 img {
-		width: 60px;
+		width: 100%;
 	}
 	
 	.zhenxuan_r_t p {
@@ -197,12 +204,14 @@
 	}
 	
 	.zhenxuan_r_b2 {
-		float: left;
-		margin-top: 2px;
-		margin-left: 18px;
+		float: right;
+		margin-top: 10px;
+		margin-right: 10px;
+		
+		width: 30%;
 	}
 	
 	.zhenxuan_r_b2 img {
-		width: 60px;
+		width: 100%;
 	}
 </style>

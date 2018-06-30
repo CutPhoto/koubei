@@ -50,7 +50,7 @@
 				console.log(this.width)
 		        setInterval(()=>{
 		        	
-		        	if(this.left<=(-this.width*6)){
+		        	if(this.left<=(-this.width*5)){
 		        		this.left=0
 		        	}
 		        	this.left-=this.width

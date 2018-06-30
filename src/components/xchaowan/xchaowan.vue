@@ -24,7 +24,7 @@
 				<p>
 					<i class="el-icon-phone" style="color: lightgreen;"></i>
 					 <span style="width: 48px; background: white;color: lightgreen;">{{text3}}</span>
-					  <span ></span>
+				
 				</p>
 			</div>
 			<div class="chaowan_r_b">
@@ -75,7 +75,7 @@
 <style>
 	.chaowan{
 		width:100%;
-		height: 120px;
+		height: 140px;
 		display: flex;
 		flex-direction: row;
 	}
@@ -97,11 +97,13 @@
 	.chaowan_l_t p span{
 		display: inline-block;
 		text-align: center;
-		width:100px;
 		line-height: 16px; 
 		background: #CCCCCC;
 		font-size: 12px;
 		border-radius: 6px;
+	}
+	.chaowan_r_b{
+		overflow: hidden;
 	}
 	.chaowan_l_b1{
 		float: left;
@@ -110,12 +112,14 @@
 		font-size: 14px;
 	}
 	.chaowan_l_b2{
-		float: left;
-		margin-top: 2px;
-		margin-left:18px;
+		float: right;
+		margin-top: 10px;
+		width: 30%;
+		margin-right: 10px;
+		
 	}
 	.chaowan_l_b2 img{
-		width: 60px;
+		width:100%;
 	}
 	.chaowan_r_t p{
 		line-height: 40px;
@@ -136,11 +140,13 @@
 		font-size: 14px;
 	}
 	.chaowan_r_b2{
-		float: left;
-		margin-top: 2px;
-		margin-left:18px;
+		float: right;
+		margin-top: 10px;
+		margin-right: 10px;
+		
+		width: 30%;
 	}
 	.chaowan_r_b2 img{
-		width: 60px;
+		width: 100%;
 	}
 </style>
