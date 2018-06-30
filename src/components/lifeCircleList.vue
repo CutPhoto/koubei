@@ -39,7 +39,7 @@
 
 <style scoped>
 	.lifeCircleList {
-		width: 147px;
+		width: 46%;
 		margin-bottom: 10px;
 		float: left;
 	}
@@ -50,7 +50,7 @@
 	}
 	
 	.lifeCircleList .indexImg {
-		width: 147px;
+		width: 100%;
 	}
 	
 	.lifeCircleList .title {

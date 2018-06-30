@@ -27,4 +27,5 @@
 </script>
 
 <style>
+a{color:#000}
 </style>

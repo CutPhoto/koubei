@@ -32,10 +32,20 @@
 		color: #2d2d2d;
 		overflow: hidden;
 	}
+	.homeLiRenListNav ul{
+		width: 100%;
+		display: flex;
+		flex-wrap: wrap;
+		
+	}
 	.homeLiRenListNav ul li{
 		float: left;
 		font-size: 14px;
-		margin-right: 15px;
+		width: 24%;
+		display: flex;
+		flex-direction: column;
+		align-items: center;
+		/*margin-right: 15px;*/
 		text-align: center;
 		margin-bottom: 10px;
 	}
@@ -51,6 +61,6 @@
 		background-position: center;
 		background-size: 80%;
 		box-shadow:1px 1px 1px #ccc,-1px -1px 1px #ccc,1px -1px 1px #ccc,-1px 1px 1px #ccc;
-		margin: 8px 0;
+		/*margin: 8px 0;*/
 	}
 </style>
