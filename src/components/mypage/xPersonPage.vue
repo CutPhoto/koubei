@@ -22,7 +22,7 @@
 				</div>
 			</div>
 		</div>
-		<div id="person_status">暂无动态</div>
+		<div id="person_status"><p class="person_status">暂无动态</p></div>
 		<div v-show="isShowSpan" class="person_opa"></div>
 		<span @click="showSpan" id="person_tj" class="person_s"><i class="iconfont icon-life-circle"></i></span>
 		<div v-show="isShowSpan" id="person_sanSpan">
@@ -163,5 +163,11 @@ export default {
 		right:0;
 		background-color: #ccc;
 		opacity: 0.1;
+	}
+	.person_status {
+		padding: 0 20px;
+		margin-top: 150px;
+		color: #999;
+		font-size: 13px;
 	}
 </style>

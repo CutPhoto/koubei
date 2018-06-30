@@ -4,8 +4,13 @@
 			<p @click="ShowDingDanDetail" :style="{color:colorJ,borderBottom:bdJ}">进行中</p>
 			<p @click="ShowDingDanTotal" :style="{color:colorT,borderBottom:bdT}">全部</p>
 		</div>
-		<div class="goods_content" v-show="!isShowDingDanDetail"><span class="no_dingdan no_J">没有进行中的订单哦</span></div>
-		<div class="goods_content" v-show="isShowDingDanDetail"><span class="no_dingdan no_T">在门店买到的宝贝会出现在这里</span><span class="no_dingdan look_T">看看附近的门店在卖啥</span></div>
+		<div class="goods_content" v-show="!isShowDingDanDetail">
+			<p class="no_dingdan">没有进行中的订单哦</p>
+		</div>
+		<div class="goods_content" v-show="isShowDingDanDetail">
+			<p class="no_dingdan">在门店买到的宝贝会出现在这里</p>
+			<p class="no_dingdan1">看看附近的门店在卖啥</p>
+		</div>
 	</div>
 </template>
 
@@ -68,25 +73,19 @@
 	}
 	
 	.no_dingdan {
-		position: absolute;
-		top: 50%;
-		left: 50%;
-		margin-top: -22px;
+		margin-top: 180px;
+		color:#999;
 	}
-	
-	.no_J {
-		margin-left: -72px;
+	.no_dingdan1{
+		margin:10px 20px 0 20px;
+		border: 1px solid #ccc;
+		background-color: #fff;
 	}
-	
-	.no_T {
-		margin-left: -112px;
-	}
-	
 	.look_T {
 		margin-top: 40px;
 		margin-left: -160px;
 		background-color: #fff;
-		padding:5px 80px;
-		border:1px solid #ccc
+		padding: 5px 80px;
+		border: 1px solid #ccc
 	}
 </style>

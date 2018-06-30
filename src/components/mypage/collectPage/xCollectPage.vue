@@ -108,7 +108,7 @@
 	
 	.no_dingdan {
 		padding: 0 60px;
-		margin-top: 300px;
+		margin-top: 180px;
 	}
 	
 	.pingjia_banner {

@@ -31,7 +31,7 @@
 				</a>
 				<a href="ka">
 					<i class="my_d iconfont icon-card "></i>
-					<span>卡</span>
+					<span>卡包</span>
 				</a>
 			</ul>
 
@@ -48,14 +48,14 @@
 						<p><i class="my_hb iconfont icon-hongbao"></i>立即评价,赢50元现金红包<i class="my_jt iconfont icon-jiantou2"></i></p>
 					</div>
 				</a>
-				<a href="" class="my_pingjia">
+				<a href="collect" class="my_pingjia">
 					<i class="my_preI iconfont icon-shoucang"></i>
 					<div class="my_pj">
 						<span>我的收藏</span>
 						<p><i class="my_jt iconfont icon-jiantou2"></i></p>
 					</div>
 				</a>
-				<a href="" class="my_pingjia">
+				<a href="quguodedian" class="my_pingjia">
 					<i class="my_preI iconfont icon-icon-"></i>
 					<div class="my_pj my_pj1">
 						<span>去过的店</span>
@@ -63,7 +63,7 @@
 					</div>
 				</a>
 				<div class="my_yhbg"></div>
-				<a href="" class="my_pingjia">
+				<a href="yinhangtehui" class="my_pingjia">
 					<i class="my_preI iconfont icon-lihe"></i>
 					<div class="my_pj my_pjLast">
 						<span>银行卡特惠</span>

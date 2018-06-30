@@ -5,7 +5,7 @@
 				<a href="myhome" class="iconfont icon-arrow-left-copy"></a><span>去过的店</span></p>
 			<i></i>
 		</div>
-		<div class="youhui_box_panel" v-hmtl="">
+		<div class="youhui_box_panel" v-html="">
 			<p class="youhui_box_ps">{{isShowData}}</p>
 			<p class="youhui_box_ps1">探索的附近好吃好玩的吧</p>
 			<p class="youhui_box_ps2">去逛逛></p>
@@ -48,7 +48,7 @@
 	
 	.youhui_box_ps {
 		padding: 0 20px;
-		margin-top: 300px;
+		margin-top: 180px;
 		color: #999;
 		font-size: 13px;
 	}
@@ -60,7 +60,7 @@
 	.youhui_box_ps2{
 		width: 100px;
 		position: absolute;
-		top: 360px;
+		top: 240px;
 		left: 50%;
 		margin-left: -50px;
 		border:1px solid orangered;

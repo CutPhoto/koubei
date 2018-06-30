@@ -28,7 +28,6 @@ import weui from 'weui'
 import './components/animate.css'
 
 import $ from './jquery-3.3.1.js'
-import "./css/base_phone.css"
 
 
 
