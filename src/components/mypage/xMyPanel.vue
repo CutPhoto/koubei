@@ -135,6 +135,7 @@
 	
 	.person_r {
 		line-height: 30px;
+		font-size: 13px;
 	}
 	
 	#my_banner {

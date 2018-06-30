@@ -29,11 +29,7 @@ import './components/animate.css'
 
 import $ from './jquery-3.3.1.js'
 
-
-
-
-
-
+import './css/base_phone.css'
 
 Vue.use(ElementUI)
 Vue.config.productionTip = false
@@ -52,18 +48,18 @@ new Vue({
 		messageBoard,
 		liftCircle,
 		home,
-	  	xtop,
-	  	ElementUI,
-	  	xbanner,
-	  	xnav,
-	  	xtoutiao,
-	  	xbanners,
-	  	xtarbar,
-	  	xchaozhi,
-	  	xchaowan,
-	  	Swiper,
-	  	xaimei,
-	  	xrenqi,
-	  	xpanel
+		xtop,
+		ElementUI,
+		xbanner,
+		xnav,
+		xtoutiao,
+		xbanners,
+		xtarbar,
+		xchaozhi,
+		xchaowan,
+		Swiper,
+		xaimei,
+		xrenqi,
+		xpanel
 	}
 })
