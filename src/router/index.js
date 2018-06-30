@@ -26,73 +26,92 @@ import xka from '../components/mypage/kaPage/xka'
 
 import xPingJia from '../components/mypage/pingjiaPage/xPingJia'
 
+import xCollectPage from '../components/mypage/collectPage/xCollectPage'
+
+import xQuGuoDeDian from '../components/mypage/quguodedianPage/xQuGuoDeDian'
+
+import xYinHangTeHui from '../components/mypage/yinhangtehuiPage/xYinHangTeHui'
+
 Vue.use(Router)
 
 export default new Router({
 
 	mode: 'history',
 	routes: [{
-		path: '/',
-		name: 'HelloWorld',
-		component: HelloWorld
-	}, {
-		path: '/liftCircle',
-		name: 'liftCircle',
-		component: liftCircle
-	}, {
-		path: '/liftDetails',
-		name: 'liftDetails',
-		component: liftDetails
-	},
-	{
-      path: '/home',
-      name: 'Home',
-      component: Home
-   },
-   {
-		path: '/nearby',
-		name: 'nearby',
-		component: nearby
-	}, {
-		path: '/nearbyDetail',
-		name: 'nearbyDetail',
-		component: nearbyDetail
-	}, {
-		path: '/shopDetails',
-		name: 'shopDetails',
-		component: shopDetails
-	}, {
-		path: '/orderCommit',
-		name: 'orderCommit',
-		component: orderCommit
-	}, {
-		path: '/homeLiRen',
-		name: 'homeLiRen',
-		component: homeLiRen
-	}, {
-		path: '/myhome',
-		name: 'Myhome',
-		component: xMyHome
-	}, {
-		path: '/dingdanhome',
-		name: 'DingDanHome',
-		component: xDingDanHome
-	}, {
-		path: '/zhifudingdan',
-		name: 'ZhiFuDingDan',
-		component: xZhiFuDingDan
-	}, {
-		path: '/youhuiquan',
-		name: 'YouHuiQuan',
-		component: xYouHuiQuan
-	}, {
-		path: '/ka',
-		name: 'ka',
-		component: xka
-	}, {
-		path: '/pingjia',
-		name: 'pingjia',
-		component: xPingJia
-	}]
+			path: '/',
+			name: 'HelloWorld',
+			component: HelloWorld
+		}, {
+			path: '/liftCircle',
+			name: 'liftCircle',
+			component: liftCircle
+		}, {
+			path: '/liftDetails',
+			name: 'liftDetails',
+			component: liftDetails
+		},
+		{
+			path: '/home',
+			name: 'Home',
+			component: Home
+		},
+		{
+			path: '/nearby',
+			name: 'nearby',
+			component: nearby
+		}, {
+			path: '/nearbyDetail',
+			name: 'nearbyDetail',
+			component: nearbyDetail
+		}, {
+			path: '/shopDetails',
+			name: 'shopDetails',
+			component: shopDetails
+		}, {
+			path: '/orderCommit',
+			name: 'orderCommit',
+			component: orderCommit
+		}, {
+			path: '/homeLiRen',
+			name: 'homeLiRen',
+			component: homeLiRen
+		}, {
+			path: '/myhome',
+			name: 'Myhome',
+			component: xMyHome
+		}, {
+			path: '/dingdanhome',
+			name: 'DingDanHome',
+			component: xDingDanHome
+		}, {
+			path: '/zhifudingdan',
+			name: 'ZhiFuDingDan',
+			component: xZhiFuDingDan
+		}, {
+			path: '/youhuiquan',
+			name: 'YouHuiQuan',
+			component: xYouHuiQuan
+		}, {
+			path: '/ka',
+			name: 'ka',
+			component: xka
+		}, {
+			path: '/pingjia',
+			name: 'pingjia',
+			component: xPingJia
+		}, {
+			path: '/collect',
+			name: 'Collect',
+			component: xCollectPage
+		}, {
+			path: '/quguodedian',
+			name: 'QuGuoDeDian',
+			component: xQuGuoDeDian
+		}, {
+			path: '/yinhangtehui',
+			name: 'YinHangTeHui',
+			component: xYinHangTeHui
+		}
+	]
 
 })

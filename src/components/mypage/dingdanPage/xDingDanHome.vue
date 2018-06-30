@@ -84,7 +84,7 @@
 	}
 	
 	#dingdan_header .dingdan_centent span {
-		height: 10px;
+		height: 22px;
 		line-height: 10px;
 		display: block;
 		padding: 5px 10px;
