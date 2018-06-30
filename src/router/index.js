@@ -3,7 +3,7 @@ import Router from 'vue-router'
 import HelloWorld from '@/components/HelloWorld'
 import liftCircle from '../pages/liftCircle.vue'
 import liftDetails from '../pages/liftDetails.vue'
-
+import Home from '@/components/home'
 Vue.use(Router)
 
 export default new Router({
@@ -20,5 +20,11 @@ export default new Router({
 		path: '/liftDetails',
 		name: 'liftDetails',
 		component: liftDetails
-	}]
+	},
+	{
+      path: '/home',
+      name: 'Home',
+      component: Home
+    }]
 })
+

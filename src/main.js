@@ -10,7 +10,22 @@ import lifeCircleHeader from './components/lifeCircleHeader.vue'
 import lifeCircleListDetails from './components/lifeCircleListDetails.vue'
 import messageBoard from './components/messageBoard.vue'
 import liftCircle from './pages/liftCircle.vue'
-
+import home from './components/home'
+import xtop from './components/xtop/xtop'
+import xbanner from './components/xbanner/xbanner'
+import xnav from './components/xnav/xnav'
+import xtoutiao from './components/xtoutiao/xtoutiao'
+import xbanners from './components/xbanners/xbanners'
+import xtarbar from './components/xtarbar/xtarbar'
+import xchaozhi from './components/xchaozhi/xchaozhi'
+import xchaowan from './components/xchaowan/xchaowan'
+import xaimei from './components/xaimei/xaimei'
+import xrenqi from './components/xrenqi/xrenqi'
+import xpanel from './components/xpanel/xpanel'
+import Swiper from 'swiper'
+import '../node_modules/swiper/dist/css/swiper.min.css'
+import weui from 'weui'
+import './components/animate.css'
 Vue.use(ElementUI)
 Vue.config.productionTip = false
 let bus = new Vue()
@@ -26,6 +41,20 @@ new Vue({
 		lifeCircleHeader,
 		lifeCircleListDetails,
 		messageBoard,
-		liftCircle
+		liftCircle,
+		home,
+	  	xtop,
+	  	ElementUI,
+	  	xbanner,
+	  	xnav,
+	  	xtoutiao,
+	  	xbanners,
+	  	xtarbar,
+	  	xchaozhi,
+	  	xchaowan,
+	  	Swiper,
+	  	xaimei,
+	  	xrenqi,
+	  	xpanel
 	}
 })
