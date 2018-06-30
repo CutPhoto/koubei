@@ -3,7 +3,7 @@
 		<div id="message_header">
 			<a @click="toggleMessageCenter" class="iconfont icon-arrow-left-copy"></a> 消息中心
 		</div>
-		<div id="my_ms">暂无消息</div>
+		<div id="my_ms"><p class="message_xinxi">暂无消息</p></div>
 	</div>
 	
 </template>
@@ -45,5 +45,11 @@
 		height:100%;
 		text-align: center;
 		overflow-x: hidden;
+	}
+	.message_xinxi {
+		padding: 0 20px;
+		margin-top: 180px;
+		color: #999;
+		font-size: 13px;
 	}
 </style>

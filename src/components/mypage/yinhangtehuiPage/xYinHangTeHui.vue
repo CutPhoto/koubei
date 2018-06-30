@@ -5,7 +5,7 @@
 				<a href="myhome" class="iconfont icon-arrow-left-copy"></a><span>银行卡特惠活动</span></p>
 			<i></i>
 		</div>
-		<div class="yinhang_box_panel" v-hmtl="">
+		<div class="yinhang_box_panel" v-html="">
 			<div class="yinhang_panel_c">
 				<div></div>
 				<p></p>

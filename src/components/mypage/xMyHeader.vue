@@ -140,7 +140,6 @@
 		display: block;
 		height: 20px;
 		line-height: 20px;
-		padding: 3px 0;
 		text-align: left;
 	}
 	

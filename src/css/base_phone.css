@@ -33,3 +33,6 @@ i{font-style:normal;}
 .fl{
 	float: left;
 }
+html,body,#app{
+	height: 100%;
+}
