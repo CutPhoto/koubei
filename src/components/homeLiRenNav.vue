@@ -1,6 +1,6 @@
 <template>
 	<div class="homeLiRenNav">
-		<i class="el-icon-arrow-left"></i>
+		<router-link to="/home"><i class="el-icon-arrow-left"></i></router-link>
 		<span>口碑-丽人</span>
 		<i class="el-icon-search fr"></i>
 	</div>

@@ -77,6 +77,7 @@
 		margin-bottom: 10px;
 	}
 	.foucsList ul li{
+		width: 32%;
 		float: left;
 		margin-right: 6px;
 	}
@@ -84,7 +85,7 @@
 		margin-right: 0;
 	}
 	.foucsList ul li img{
-		width: 96px;
+		width: 100%;
 	}
 	.foucsList h2{
 		font-size: 14px;

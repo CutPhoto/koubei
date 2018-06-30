@@ -1,6 +1,6 @@
 <template>
 	<h2 class="shopDetailsTop">
-		<i class="el-icon-arrow-left"></i>
+		<router-link to="/nearby"><i class="el-icon-arrow-left"></i></router-link>
 		<span>
 			<i class="el-icon-star-off"></i>
 			<i class="el-icon-share"></i>

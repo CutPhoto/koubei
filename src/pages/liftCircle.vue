@@ -1,6 +1,6 @@
 <template>
 	<div>
-		<lifeCircleHeader class="liftCircleIndex" v-show="!isShowDetails">
+		<div><lifeCircleHeader class="liftCircleIndex" v-show="!isShowDetails">
 			<div slot="focus">
 				<h2 class="liftCircleIndexTitle">关注感兴趣的人，丰富你的动态</h2>
 				<foucsList :foucsListArr="foucsListArr" @toShow="getBool"/>
@@ -12,11 +12,13 @@
 
 			</div>
 		</lifeCircleHeader>
+		</div>
 		<lifeCircleListDetails v-show="isShowDetails" @toShow="getBool">
 			<div slot="messageBoard">
 				<messageBoard/>
 			</div>
 		</lifeCircleListDetails>
+		<xtarbar class="liftCircleBottom"></xtarbar>
 	</div>	
 </template>
 
@@ -26,6 +28,7 @@
 	import foucsList from '../components/foucsList.vue'
 	import lifeCircleListDetails from '../components/lifeCircleListDetails.vue'
 	import messageBoard from '../components/messageBoard.vue'
+	import xtarbar from '../components/xtarbar/xtarbar'
 
 	export default {
 		data() {
@@ -144,7 +147,8 @@
 			lifeCircleHeader,
 			foucsList,
 			lifeCircleListDetails,
-			messageBoard
+			messageBoard,
+			xtarbar
 		},
 		methods: {
 			getBool(msg){
@@ -166,5 +170,9 @@
 	.liftCircleHref img{
 		width: 100%;
 		padding: 10px;
+	}
+	.liftCircleBottom{
+		position:fixed ;
+		bottom: 0;
 	}
 </style>

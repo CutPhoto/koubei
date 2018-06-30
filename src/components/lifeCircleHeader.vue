@@ -26,7 +26,7 @@
 		}
 	};
 </script>
-<style scoped>
+<style>
 	.el-tabs__header{
 		margin: 0;
 	}
