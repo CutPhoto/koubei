@@ -44,7 +44,7 @@
 	}
 	
 	.shopAddress .shopAddressDetail {
-		width: 170px;
+		width: 53%;
 		height: 50px;
 		float: left;
 		font-size: 16px;

@@ -12,7 +12,7 @@
 					</div>
 				</div>
 				<div class="shopOnSaleTobuy">
-					<i>购买</i>
+					<router-link to="/nearbyDetail"><i>购买</i></router-link>
 					<br />
 					<span> 已售{{item.toSale}}份</span>
 				</div>

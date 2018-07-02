@@ -29,6 +29,7 @@
 <style scoped>
 	.shopDetailsMsg {
 		width: 100%;
+		min-height: 120px;
 	}
 	
 	.shopDetailsMsg img {
