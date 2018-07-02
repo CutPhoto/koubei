@@ -89,9 +89,6 @@
 		line-height: 60px;
 		text-align: center;
 		background-color: #FF6300;
-		position: fixed;
-		top: 0;
-		left: 0;
 	}
 	
 	.header_right {
@@ -107,11 +104,6 @@
 	.header_right_dian {
 		font-size: 25px;
 	}
-	
-	#my_header {
-		position: relative;
-	}
-	
 	.my_gallery_txt {
 		position: fixed;
 		top: 60px;

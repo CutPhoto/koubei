@@ -1,7 +1,9 @@
 <template>
-	<div id="panel_box">
+	<div id="panel_box" :style="{
+		flex:1,
+		overflowX:'hidden'
+	}">
 		<div id="panel" :style="{
-				marginTop: '60px',
 				marginBottom:'74px'
 				
 			}">
@@ -73,7 +75,7 @@
 				<div class="my_yhbg"></div>
 			</section>
 		</div>
-		<xPersonPage v-show = "isShowPersonPage"/>
+		<xPersonPage v-show="isShowPersonPage" />
 	</div>
 </template>
 
@@ -86,10 +88,10 @@
 				isShowPersonPage: false
 			}
 		},
-		computed:{
-			hidPersonPage(){
-				const self=this
-				bus.$on('to-hidPersonPage',(data)=>{
+		computed: {
+			hidPersonPage() {
+				const self = this
+				bus.$on('to-hidPersonPage', (data) => {
 					self.isShowPersonPage = data.isShowPersonPage
 				})
 			}
@@ -97,8 +99,8 @@
 		components: {
 			xPersonPage
 		},
-		methods:{
-			PersonPage(){
+		methods: {
+			PersonPage() {
 				this.isShowPersonPage = !this.isShowPersonPage
 			}
 		}
