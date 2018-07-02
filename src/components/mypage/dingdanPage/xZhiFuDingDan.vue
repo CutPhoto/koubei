@@ -2,7 +2,7 @@
 	<div id="zhifu_dd" v-html="">
 		<div class="zhifu_hid">
 			<p>内容为空</p>
-			<span>这可能是个假页面,看看其他吧</span>
+			<p>这可能是个假页面,看看其他吧</p>
 		</div>
 
 	</div>
@@ -28,11 +28,7 @@
 		text-align: center;
 	}
 	.zhifu_hid{
-		position: absolute;
-		top:50%;
-		left:50%;
-		margin-left: -106px;
-		margin-top: -25px;
+		margin-top: 180px;
 	}
 	.zhifu_hid span{
 		color: #ccc;

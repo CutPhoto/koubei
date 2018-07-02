@@ -2,10 +2,10 @@
 	<div>
 		<div class="ka_box_h">
 			<p>
-				<a href="myhome" class="iconfont icon-arrow-left-copy"></a><span>券</span></p>
+				<a href="myhome" class="iconfont icon-arrow-left-copy"></a><span>卡</span></p>
 			<i class="iconfont icon-youhuiquan"></i>
 		</div>
-		<div class="ka_box_panel"><span class="ka_box_ps">暂时没有可用的券</span></div>
+		<div class="ka_box_panel"><p class="ka_box_ps">暂时没有卡</p></div>
 	</div>
 </template>
 
@@ -36,10 +36,6 @@
 	}
 	
 	.ka_box_ps {
-		position: absolute;
-		top: 50%;
-		left: 50%;
-		margin-left: -64px;
-		margin-top: -10px;
+		margin-top: 180px;
 	}
 </style>

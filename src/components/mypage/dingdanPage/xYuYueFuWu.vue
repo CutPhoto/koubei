@@ -2,7 +2,7 @@
 	<div id="yuyue_fw" v-html="">
 		<div class="yuyue_hid">
 			<p>内容为空</p>
-			<span>还没有相关的订单哦</span>
+			<p>还没有相关的订单哦</p>
 		</div>
 	</div>
 </template>
@@ -20,11 +20,7 @@
 		text-align: center;
 	}
 	.yuyue_hid{
-		position: absolute;
-		top:50%;
-		left:50%;
-		margin-left: -72px;
-		margin-top: -25px;
+		margin-top: 180px;
 	}
 	.yuyue_hid span{
 		color: #ccc;

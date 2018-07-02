@@ -1,8 +1,8 @@
 <template>
-	<div>
+	<div id="home_box">
 		<xMyHeader/>
 		<xMyPanel/>
-		<xMyTabbar/>
+		<xtarbar/>
 	</div>
 </template>
 
@@ -13,14 +13,14 @@
 	
 	import xMyPanel from './xMyPanel'
 	
-	import xMyTabbar from './xMyTabbar'
+	import xtarbar from '../xtarbar/xtarbar'
 	
 	
 	export default{
 		components:{
 			xMyHeader,
 			xMyPanel,
-			xMyTabbar
+			xtarbar
 		}
 	}
 	
@@ -28,4 +28,10 @@
 
 <style>
 a{color:#000}
+#home_box{
+	display:flex;
+	flex-direction: column;
+	width: 100%;
+	height: 100%;
+}
 </style>
