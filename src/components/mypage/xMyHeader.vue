@@ -4,18 +4,17 @@
 			<div></div>
 			<div class="header_right">
 				<i :data-message="hidMessageCenter" @click="toggleMessageCenter" class="header_right_xin iconfont icon-xinfeng"></i>
-				<i :data-hidHelpFeedback="hidHelpFeedback" @click="toggleGallery" class="header_right_dian iconfont icon-diandiandian"></i>
+				<i @click="toggleGallery" class="header_right_dian iconfont icon-diandiandian"></i>
 			</div>
 		</header>
 
 		<div @click="toggleGallery" id="my_zzc" v-show="isShowGallery"></div>
 		<div class="my_gallery_txt" v-show="isShowGallery">
 				<i class="my_sanjiao"></i>
-				<a @click="toggleHelpFeedback" class="my_h"><i class="my_hs iconfont icon-bangzhuyufankui"></i>帮助与反馈</a>
+				<a href="helpfeedback" class="my_h"><i class="my_hs iconfont icon-bangzhuyufankui"></i>帮助与反馈</a>
 				<a @click="toggleSeting"><i class="my_hs iconfont icon-shezhi"></i>设置</a>
 			</div>
 		<xMessageCenter v-show="isShowMessage" />
-		<xHelpFeedback v-show="isShowHelpFeedback" />
 		<xSeting :data-hidseting="hidSeting" v-show="isShowSeting" />
 	</div>
 
@@ -24,7 +23,6 @@
 <script>
 	import bus from "../../bus.js";
 	import xMessageCenter from './xMessageCenter';
-	import xHelpFeedback from './xHelpFeedback';
 	import xSeting from './xSeting';
 	export default {
 		data() {
@@ -42,12 +40,6 @@
 					self.isShowMessage = data.isShowMessage
 				})
 			},
-			hidHelpFeedback() {
-				const self = this
-				bus.$on("to_myheader", (data) => {
-					self.isShowHelpFeedback = data.isShowHelpFeedback
-				})
-			},
 			hidSeting() {
 				const self = this
 				bus.$on("to_myheader_seting", (data) => {
@@ -56,7 +48,6 @@
 			}
 		},
 		components: {
-			xHelpFeedback,
 			xSeting,
 			xMessageCenter
 		},

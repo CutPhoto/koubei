@@ -45,7 +45,8 @@ export default {
 	methods: {
 		PersonPage() {
 			bus.$emit("to-hidPersonPage", {
-					isShowPersonPage: false
+					isShowPersonPage: false,
+					isShowLoaderPage:false
 				})
 			},
 			showSpan(){

@@ -40,6 +40,9 @@
 		font-weight: bold;
 		background-color: #fff;
 	}
+	#message_header a{
+		margin-right: 10px;
+	}
 	#my_ms{
 		width: 100%;
 		height:100%;

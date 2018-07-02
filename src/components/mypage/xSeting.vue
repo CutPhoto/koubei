@@ -84,6 +84,9 @@
 		font-weight: bold;
 		background-color: #fff;
 	}
+	#seting_header a{
+		margin-right: 10px;
+	}
 	
 	.weui-cell:before {
 		border-top: 1px solid transparent;

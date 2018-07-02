@@ -32,6 +32,8 @@ import xQuGuoDeDian from '../components/mypage/quguodedianPage/xQuGuoDeDian'
 
 import xYinHangTeHui from '../components/mypage/yinhangtehuiPage/xYinHangTeHui'
 
+import xHelpFeedback from '../components/mypage/xHelpFeedback'
+
 Vue.use(Router)
 
 export default new Router({
@@ -111,6 +113,10 @@ export default new Router({
 			path: '/yinhangtehui',
 			name: 'YinHangTeHui',
 			component: xYinHangTeHui
+		}, {
+			path: '/helpfeedback',
+			name: 'HelpFeedback',
+			component: xHelpFeedback
 		}
 	]
 

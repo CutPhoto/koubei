@@ -4,6 +4,7 @@
 			<p @click="ShowDingDanDetail" :style="{color:colorJ,borderBottom:bdJ}">进行中</p>
 			<p @click="ShowDingDanTotal" :style="{color:colorT,borderBottom:bdT}">全部</p>
 		</div>
+		<xLoader :data-loader="loaderPage" v-if="isShowLoaderPage==='0'"/>
 		<div class="goods_content" v-show="!isShowDingDanDetail">
 			<p class="no_dingdan">没有进行中的订单哦</p>
 		</div>
@@ -11,10 +12,12 @@
 			<p class="no_dingdan">在门店买到的宝贝会出现在这里</p>
 			<p class="no_dingdan1">看看附近的门店在卖啥</p>
 		</div>
+
 	</div>
 </template>
 
 <script>
+	import xLoader from "../xLoader"
 	export default {
 		data() {
 			return {
@@ -22,8 +25,19 @@
 				colorJ: 'red',
 				colorT: '',
 				bdJ: '1px solid red',
-				bdT: ''
+				bdT: '',
+				isShowLoaderPage:'0'
 			}
+		},
+		computed: {
+			loaderPage() {
+				setTimeout(() => {
+					this.isShowLoaderPage = ''
+				}, 2000)
+			}
+		},
+		components:{
+			xLoader
 		},
 		methods: {
 			ShowDingDanDetail() {
@@ -39,7 +53,7 @@
 				this.colorT = 'red'
 				this.bdT = "1px solid red"
 				this.bdJ = ""
-			}
+			},
 		}
 	}
 </script>
@@ -62,6 +76,10 @@
 		text-align: center;
 	}
 	
+	.weui-loadmore {
+		margin-top: 180px;
+	}
+	
 	#Goods_Ding_Dan .goods_content {
 		position: fixed;
 		align-content: center;
@@ -74,13 +92,15 @@
 	
 	.no_dingdan {
 		margin-top: 180px;
-		color:#999;
+		color: #999;
 	}
-	.no_dingdan1{
-		margin:10px 20px 0 20px;
+	
+	.no_dingdan1 {
+		margin: 10px 20px 0 20px;
 		border: 1px solid #ccc;
 		background-color: #fff;
 	}
+	
 	.look_T {
 		margin-top: 40px;
 		margin-left: -160px;

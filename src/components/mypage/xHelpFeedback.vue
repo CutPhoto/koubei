@@ -1,7 +1,14 @@
 <template>
 	<div id="help_box">
-		<div id="help_header">
-			<a @click="hidHelpFeedback" class="iconfont icon-arrow-left-copy"></a> 帮助与反馈
+		<div :data-width="progress" id="help_header">
+			<a href="myhome" class="iconfont icon-arrow-left-copy"></a> 帮助与反馈
+		</div>
+		<div class="weui-progress">
+			<div class="weui-progress__bar">
+				<div class="weui-progress__inner-bar js_progress" :style="{
+				width:`${widths}%`
+			}"></div>
+			</div>
 		</div>
 		<div :style="{
 				height:'10px',
@@ -67,21 +74,30 @@
 
 <script>
 	import bus from "../../bus.js";
+
 	export default {
-		methods:{
-			hidHelpFeedback(){
-				bus.$emit("to_myheader",{
-					isShowHelpFeedback:false
-				})
+		data() {
+			return {
+				widths: 0
+			}
+		},
+		computed: {
+			progress() {
+				var timer = setInterval(() => {
+					this.widths++
+						if(this.widths === 100) {
+							clearInterval(timer);
+							this.widths = 0;
+						}
+				}, 10)
 			}
 		}
 	}
-	
 </script>
 
 <style scoped>
 	@import "../../assets/iconfont/iconfont.css";
-	#help_box{
+	#help_box {
 		position: fixed;
 		top: 0;
 		left: 0;
@@ -90,6 +106,7 @@
 		background-color: #fff;
 		z-index: 1000;
 	}
+	
 	#help_header {
 		height: 40px;
 		line-height: 40px;
@@ -100,6 +117,15 @@
 	
 	#help_header a {
 		margin-right: 10px;
+	}
+	
+	.weui-progress__bar {
+		background-color: #F8F8F8;
+	}
+	
+	.js_progress {
+		width: 5px;
+		background-color: orangered;
 	}
 	
 	.weui-cell:before {

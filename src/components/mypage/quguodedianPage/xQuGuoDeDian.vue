@@ -5,6 +5,7 @@
 				<a href="myhome" class="iconfont icon-arrow-left-copy"></a><span>去过的店</span></p>
 			<i></i>
 		</div>
+		<xLoader :data-loader="loaderPage" v-if="isShowLoaderPage==='0'"/>
 		<div class="youhui_box_panel" v-html="">
 			<p class="youhui_box_ps">{{isShowData}}</p>
 			<p class="youhui_box_ps1">探索的附近好吃好玩的吧</p>
@@ -14,12 +15,24 @@
 </template>
 
 <script>
+	import xLoader from "../xLoader"
 	export default {
 		data() {
 			return {
-				isShowData: '还没去过任何的店铺哦'
+				isShowData: '还没去过任何的店铺哦',
+				isShowLoaderPage:'0'
 			}
-		}
+		},
+		components:{
+			xLoader
+		},
+		computed: {
+			loaderPage() {
+				setTimeout(() => {
+					this.isShowLoaderPage = ''
+				}, 2000)
+			}
+		},
 	}
 </script>
 

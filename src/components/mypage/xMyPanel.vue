@@ -75,6 +75,7 @@
 				<div class="my_yhbg"></div>
 			</section>
 		</div>
+		<xLoader v-show="isShowLoaderPage" />
 		<xPersonPage v-show="isShowPersonPage" />
 	</div>
 </template>
@@ -82,10 +83,13 @@
 <script>
 	import bus from "../../bus.js";
 	import xPersonPage from "./xPersonPage";
+	
+	import xLoader from "./xLoader";
 	export default {
 		data() {
 			return {
-				isShowPersonPage: false
+				isShowPersonPage: false,
+				isShowLoaderPage:false
 			}
 		},
 		computed: {
@@ -93,15 +97,20 @@
 				const self = this
 				bus.$on('to-hidPersonPage', (data) => {
 					self.isShowPersonPage = data.isShowPersonPage
+					self.isShowLoaderPage = data.isShowLoaderPage
 				})
 			}
 		},
 		components: {
-			xPersonPage
+			xPersonPage,
+			xLoader
 		},
 		methods: {
 			PersonPage() {
-				this.isShowPersonPage = !this.isShowPersonPage
+				this.isShowLoaderPage = !this.isShowLoaderPage
+				setTimeout(()=>{
+					this.isShowPersonPage = !this.isShowPersonPage
+				},1000)
 			}
 		}
 	}
@@ -112,7 +121,10 @@
 	a {
 		text-decoration: none;
 	}
-	
+	.js_show{
+		top:0;
+		left:0;
+	}
 	#person {
 		display: flex;
 		justify-content: space-between;
