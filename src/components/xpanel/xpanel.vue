@@ -9,7 +9,7 @@
     			<p>hi，上午好！为你更新附近白领常去的人气好店</p>
     		</div>
     	</div>
-		<a @click="toggleGallery(a.src)" v-for="a in news" href="javascript:void(0);" class="weui-media-box weui-media-box_appmsg">
+		<a @click="toggleGallery(a.src)" v-for="a in news" href="nearbyDetail" class="weui-media-box weui-media-box_appmsg">
 			<div class="weui-media-box__hd">
 				<img class="weui-media-box__thumb" :src="a.src" alt="">
 			</div>

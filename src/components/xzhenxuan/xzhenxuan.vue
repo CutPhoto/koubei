@@ -6,7 +6,7 @@
 			</h3>
 		</div>
 		<div class="zhenxuan">
-			<div class="zhenxuan_l">
+			<a href="shopDetails" class="zhenxuan_l">
 				<div class="zhenxuan_l_t">
 					<p>
 						<span style="width: 40px; background: white;color: pink;">肯德基</span><br />
@@ -23,8 +23,8 @@
 						<img src="../../assets/zhenxuan1.jpg" alt="" />
 					</div>
 				</div>
-			</div>
-			<div class="zhenxuan_r">
+			</a>
+			<a href="shopDetails" class="zhenxuan_r">
 				<div class="zhenxuan_r_t">
 					<p class="zhen1">
 						<span style="width: 40px; background: white;color: lightgreen;">必胜客</span><br />
@@ -41,10 +41,10 @@
 						<img src="../../assets/zhenxuan2.jpg" alt="" />
 					</div>
 				</div>
-			</div>
+			</a>
 		</div>
 		<div class="zhenxuan">
-			<div class="zhenxuan_l">
+			<a href="shopDetails" class="zhenxuan_l">
 				<div class="zhenxuan_l_t">
 					<p class="zhen2">
 						<span style="width: 40px; background: white;color: pink;">周黑鸭</span><br />
@@ -61,8 +61,8 @@
 						<img src="../../assets/zhenxuan3.jpg" alt="" />
 					</div>
 				</div>
-			</div>
-			<div class="zhenxuan_r">
+			</a>
+			<a href="shopDetails" class="zhenxuan_r">
 				<div class="zhenxuan_r_t">
 					<p class="zhen3">
 					
@@ -80,7 +80,7 @@
 						<img src="../../assets/zhenxuan4.jpg" alt="" />
 					</div>
 				</div>
-			</div>
+			</a>
 		</div>
 		<div class="chao2">
 			<span>更多品牌甄选</span>
