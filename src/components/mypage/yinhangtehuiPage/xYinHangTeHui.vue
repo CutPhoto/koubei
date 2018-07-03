@@ -2,7 +2,8 @@
 	<div>
 		<div class="yinhang_box_h">
 			<p>
-				<a href="myhome" class="iconfont icon-arrow-left-copy"></a><span>银行卡特惠活动</span></p>
+				<router-link to="/myhome"><a class="iconfont icon-arrow-left-copy"></a></router-link><span>银行卡特惠活动</span>
+			</p>
 			<i></i>
 		</div>
 		<div class="yinhang_box_panel" v-html="">

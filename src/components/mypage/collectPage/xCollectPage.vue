@@ -2,7 +2,7 @@
 	<div>
 		<div class="pingjia_box_h">
 			<p>
-				<a href="myhome" class="iconfont icon-arrow-left-copy"></a>
+				<router-link to="/myhome"><i class="iconfont icon-arrow-left-copy"></i></router-link>
 				<span>我的收藏</span>
 			</p>
 			<i class="iconfont icon-xinfeng"></i>

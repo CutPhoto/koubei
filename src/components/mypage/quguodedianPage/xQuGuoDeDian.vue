@@ -2,7 +2,7 @@
 	<div>
 		<div class="youhui_box_h">
 			<p>
-				<a href="myhome" class="iconfont icon-arrow-left-copy"></a><span>去过的店</span></p>
+				<router-link to="/myhome"><i class="iconfont icon-arrow-left-copy"></i></router-link><span>去过的店</span></p>
 			<i></i>
 		</div>
 		<xLoader :data-loader="loaderPage" v-if="isShowLoaderPage==='0'"/>

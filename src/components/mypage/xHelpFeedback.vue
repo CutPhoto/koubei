@@ -1,7 +1,7 @@
 <template>
 	<div id="help_box">
 		<div :data-width="progress" id="help_header">
-			<a href="myhome" class="iconfont icon-arrow-left-copy"></a> 帮助与反馈
+			<router-link to="/myhome"><i class="iconfont icon-arrow-left-copy"></i></router-link> 帮助与反馈
 		</div>
 		<div class="weui-progress">
 			<div class="weui-progress__bar">

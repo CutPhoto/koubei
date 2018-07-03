@@ -12,29 +12,29 @@
 					<i class="person_ll" style="background-image: url('../../../static/img/indexImg.png')"></i>
 					<span class="person_lr">organization</span>
 				</a>
-				<a @click="PersonPage" :data-showpersonpage="hidPersonPage" class="person_r">
+				<a @click="Loader" :data-showpersonpage="hidPersonPage" class="person_r">
 					<span>个人主页</span>
 					<i class="iconfont icon-jiantou2"></i>
 				</a>
 			</div>
 
-			<div id="my_banner">
+			<div id="my_banner" @click="KouBeiKaPage">
 				<img src="../../../static/img/myBanner.jpg" />
 			</div>
 
 			<ul id="my_dyk">
-				<a href="dingdanhome">
+				<li>
 					<i class="my_d iconfont icon-icon- "></i>
-					<span>订单</span>
-				</a>
-				<a href="youhuiquan">
+					<router-link to="/dingdanhome"><span>订单</span></router-link>
+				</li>
+				<li>
 					<i class="my_d iconfont icon-youhuiquan "></i>
-					<span>优惠券</span>
-				</a>
-				<a href="ka">
+					<router-link to="/youhuiquan"><span>优惠券</span></router-link>
+				</li>
+				<li>
 					<i class="my_d iconfont icon-card "></i>
-					<span>卡包</span>
-				</a>
+					<router-link to="/ka"><span>卡包</span></router-link>
+				</li>
 			</ul>
 
 			<div id="my_bg">
@@ -43,53 +43,55 @@
 			</div>
 
 			<section id="my_section">
-				<a href="pingjia" class="my_pingjia">
+				<router-link to="/pingjia"><a class="my_pingjia">
 					<i class="my_preI iconfont icon-xinxi"></i>
 					<div class="my_pj">
 						<span>我的评价</span>
 						<p><i class="my_hb iconfont icon-hongbao"></i>立即评价,赢50元现金红包<i class="my_jt iconfont icon-jiantou2"></i></p>
 					</div>
-				</a>
-				<a href="collect" class="my_pingjia">
+				</a></router-link>
+				<router-link to="/collect"><a class="my_pingjia">
 					<i class="my_preI iconfont icon-shoucang"></i>
 					<div class="my_pj">
 						<span>我的收藏</span>
 						<p><i class="my_jt iconfont icon-jiantou2"></i></p>
 					</div>
-				</a>
-				<a href="quguodedian" class="my_pingjia">
+				</a></router-link>
+				<router-link to="/quguodedian"><a class="my_pingjia">
 					<i class="my_preI iconfont icon-icon-"></i>
 					<div class="my_pj my_pj1">
 						<span>去过的店</span>
 						<p><i class="my_jt iconfont icon-jiantou2"></i></p>
 					</div>
-				</a>
+				</a></router-link>
 				<div class="my_yhbg"></div>
-				<a href="yinhangtehui" class="my_pingjia">
+				<router-link to="/yinhangtehui"><a class="my_pingjia">
 					<i class="my_preI iconfont icon-lihe"></i>
 					<div class="my_pj my_pjLast">
 						<span>银行卡特惠</span>
 						<p><i class="my_jt iconfont icon-jiantou2"></i></p>
 					</div>
-				</a>
+				</a></router-link>
 				<div class="my_yhbg"></div>
 			</section>
 		</div>
 		<xLoader v-show="isShowLoaderPage" />
 		<xPersonPage v-show="isShowPersonPage" />
+		<xKouBeiKa v-show="isShowKouBeiKaPage" />
 	</div>
 </template>
 
 <script>
 	import bus from "../../bus.js";
 	import xPersonPage from "./xPersonPage";
-	
 	import xLoader from "./xLoader";
+	import xKouBeiKa from "./KouBeiKa/xKouBeiKa";
 	export default {
 		data() {
 			return {
 				isShowPersonPage: false,
-				isShowLoaderPage:false
+				isShowLoaderPage: false,
+				isShowKouBeiKaPage: false
 			}
 		},
 		computed: {
@@ -103,14 +105,22 @@
 		},
 		components: {
 			xPersonPage,
-			xLoader
+			xLoader,
+			xKouBeiKa
 		},
 		methods: {
-			PersonPage() {
+			Loader() {
 				this.isShowLoaderPage = !this.isShowLoaderPage
-				setTimeout(()=>{
+				setTimeout(() => {
 					this.isShowPersonPage = !this.isShowPersonPage
-				},1000)
+				}, 1000)
+			},
+			KouBeiKaPage() {
+				var self = this;
+				self.isShowKouBeiKaPage = !self.isShowKouBeiKaPage
+				bus.$on("To-KouBieKaPage", (data) => {
+					self.isShowKouBeiKaPage = data.isShowKouBeiKaPage
+				})
 			}
 		}
 	}
@@ -121,10 +131,12 @@
 	a {
 		text-decoration: none;
 	}
-	.js_show{
-		top:0;
-		left:0;
+	
+	.js_show {
+		top: 0;
+		left: 0;
 	}
+	
 	#person {
 		display: flex;
 		justify-content: space-between;
@@ -168,7 +180,7 @@
 		padding: 10px 0;
 	}
 	
-	#my_dyk a {
+	#my_dyk li {
 		width: 33.33%;
 		display: flex;
 		flex-direction: column;

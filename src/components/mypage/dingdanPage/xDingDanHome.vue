@@ -1,7 +1,7 @@
 <template>
 	<div id="diingdan_box">
 		<div id="dingdan_header">
-			<a href="myhome" class="dingdan_centent_i iconfont icon-arrow-left-copy"></a>
+			<router-link to="/myhome"><i class="dingdan_centent_i iconfont icon-arrow-left-copy"></i></router-link>
 			<div class="dingdan_centent">
 				<span @click="GoodsDingDan" :style="{backgroundColor:gbgColor,color:gfontColor}">商品订单</span>
 				<span  @click="ZhiFuDingDan" :style="{backgroundColor:zbgColor,color:zfontColor}">支付订单</span>

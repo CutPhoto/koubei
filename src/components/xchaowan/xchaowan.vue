@@ -1,6 +1,6 @@
 <template>
 	<div class="chaowan">
-		<a href="shopDetails" class="chaowan_l">
+		<div class="chaowan_l">
 			<div class="chaowan_l_t">
 				<p>
 					<i class="el-icon-phone" style="color: pink;"></i>
@@ -18,8 +18,8 @@
 					<img :src="commodity[0].src" alt="" />
 				</div>
 			</div>
-		</a>
-		<a href="shopDetails" class="chaowan_r">
+		</div>
+		<div class="chaowan_r">
 			<div class="chaowan_r_t">
 				<p>
 					<i class="el-icon-phone" style="color: lightgreen;"></i>
@@ -37,7 +37,7 @@
 					<img :src="commodity[1].src" alt="" />
 				</div>
 			</div>
-		</a>
+		</div>
 		
 	</div>
 	

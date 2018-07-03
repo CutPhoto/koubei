@@ -31,9 +31,8 @@
 		width: 100%;
 		height: 50px;
 		line-height: 50px;
-		padding: 0 20px;
+		padding:0 20px;
 	}
-	
 	.weui-loadmore {
 		margin-top: 180px;
 	}

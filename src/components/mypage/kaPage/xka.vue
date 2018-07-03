@@ -2,7 +2,7 @@
 	<div>
 		<div class="ka_box_h">
 			<p>
-				<a href="myhome" class="iconfont icon-arrow-left-copy"></a><span>卡</span></p>
+				<router-link to="/myhome"><i class="iconfont icon-arrow-left-copy"></i></router-link><span>卡</span></p>
 			<i class="iconfont icon-youhuiquan"></i>
 		</div>
 		<div class="ka_box_panel"><p class="ka_box_ps">暂时没有卡</p></div>

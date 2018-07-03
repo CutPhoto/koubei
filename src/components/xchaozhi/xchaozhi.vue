@@ -6,7 +6,7 @@
 		<div class="chaozhi_c">
 			<img :src="img" alt="" />
 		</div>
-		<a href="/shopDetails" class="chaozhi_b">
+		<div class="chaozhi_b">
 			<div class="chaozhi_b_t">
 				<img :src="commodity[0].src" alt="" />
 				<p v-text="commodity[0].name"></p>
@@ -22,7 +22,7 @@
 				<p v-text="commodity[2].name"></p>
 				<p><span v-text="commodity[2].price"></span><del v-text="commodity[2].del"></del></p>
 			</div>
-		</a>
+		</div>
 	</div>
 </template>
 

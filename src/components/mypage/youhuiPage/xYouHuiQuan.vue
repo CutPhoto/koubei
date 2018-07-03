@@ -1,7 +1,7 @@
 <template>
 	<div>
 		<div class="youhui_box_h">
-			<p><a href="myhome" class="iconfont icon-arrow-left-copy"></a><span>券</span></p>
+			<p><router-link to="/myhome"><i class="iconfont icon-arrow-left-copy"></i></router-link><span>券</span></p>
 			<i class="iconfont icon-youhuiquan"></i>
 		</div>
 		<div class="youhui_box_panel"><p class="youhui_box_ps">暂时没有可用的券</p></div>

@@ -5,52 +5,52 @@
 			<li class="nav_l">
 				<ul class="nav_l_x">
 					<li>
-						<a href="/homeLiRen">
+						<a href="#">
 							<img src="../../assets/nav1.jpg" alt="" />
 						</a>
 					</li>
 					<li>
-						<a href="/homeLiRen">
+						<a href="#">
 							<img src="../../assets/nav2.jpg" alt="" />
 						</a>
 					</li>
 					<li>
-						<a href="/homeLiRen">
+						<a href="#">
 							<img src="../../assets/nav3.jpg" alt="" />
 						</a>
 					</li>
 					<li>
-						<a href="/homeLiRen">
+						<a href="#">
 							<img src="../../assets/nav4.jpg" alt="" />
 						</a>
 					</li>
 					<li>
-						<a href="/homeLiRen">
+						<a href="#">
 							<img src="../../assets/nav5.jpg" alt="" />
 						</a>
 					</li>
 					<li>
-						<a href="/homeLiRen">
+						<a href="#">
 							<img src="../../assets/nav6.jpg" alt="" />
 						</a>
 					</li>
 					<li>
-						<a href="/homeLiRen">
+						<a href="#">
 							<img src="../../assets/nav7.jpg" alt="" />
 						</a>
 					</li>
 					<li>
-						<a href="/homeLiRen">
+						<a href="#">
 							<img src="../../assets/nav8.jpg" alt="" />
 						</a>
 					</li>
 					<li>
-						<a href="/homeLiRen">
+						<a href="#">
 							<img src="../../assets/nav9.jpg" alt="" />
 						</a>
 					</li>
 					<li>
-						<a href="/homeLiRen">
+						<a href="#">
 							<img src="../../assets/nav10.jpg" alt="" />
 						</a>
 					</li>
@@ -59,52 +59,52 @@
 			<li class="nav_r">
 				<ul class="nav_r_x">
 					<li>
-						<a href="/homeLiRen">
+						<a href="#">
 							<img src="../../assets/nav1.jpg" alt="" />
 						</a>
 					</li>
 					<li>
-						<a href="/homeLiRen">
+						<a href="#">
 							<img src="../../assets/nav2.jpg" alt="" />
 						</a>
 					</li>
 					<li>
-						<a href="/homeLiRen">
+						<a href="#">
 							<img src="../../assets/nav3.jpg" alt="" />
 						</a>
 					</li>
 					<li>
-						<a href="/homeLiRen">
+						<a href="#">
 							<img src="../../assets/nav4.jpg" alt="" />
 						</a>
 					</li>
 					<li>
-						<a href="/homeLiRen">
+						<a href="#">
 							<img src="../../assets/nav5.jpg" alt="" />
 						</a>
 					</li>
 					<li>
-						<a href="/homeLiRen">
+						<a href="#">
 							<img src="../../assets/nav6.jpg" alt="" />
 						</a>
 					</li>
 					<li>
-						<a href="/homeLiRen">
+						<a href="#">
 							<img src="../../assets/nav7.jpg" alt="" />
 						</a>
 					</li>
 					<li>
-						<a href="/homeLiRen">
+						<a href="#">
 							<img src="../../assets/nav8.jpg" alt="" />
 						</a>
 					</li>
 					<li>
-						<a href="/homeLiRen">
+						<a href="#">
 							<img src="../../assets/nav9.jpg" alt="" />
 						</a>
 					</li>
 					<li>
-						<a href="/homeLiRen">
+						<a href="#">
 							<img src="../../assets/nav10.jpg" alt="" />
 						</a>
 					</li>
