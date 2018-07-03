@@ -4,7 +4,7 @@
 		<div class="aimei_t">
 			<i class="el-icon-goods"></i><span>爱美嗨玩</span><span>买多次更省钱</span>
 		</div>
-		<div class="aimei_b">
+		<a href="shopDetails" class="aimei_b">
 			<div class="aimei_b_l">
 				<img img :src="commodity[0].src" alt="" />
 				<p v-text="commodity[0].name"></p>
@@ -20,7 +20,7 @@
 				<p v-text="commodity[2].name"></p>
 				<p><span v-text="commodity[2].price"></span><del v-text="commodity[2].del"></del></p>
 			</div>
-		</div>
+		</a>
 		<div class="aimei_k"></div>
 	</div>
 </template>
