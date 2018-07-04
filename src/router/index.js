@@ -32,6 +32,10 @@ import xQuGuoDeDian from '../components/mypage/quguodedianPage/xQuGuoDeDian'
 
 import xYinHangTeHui from '../components/mypage/yinhangtehuiPage/xYinHangTeHui'
 
+import xlogin from '../pages/xlogin'
+
+import xSeting from '../components/mypage/xSeting'
+
 import xHelpFeedback from '../components/mypage/xHelpFeedback'
 
 Vue.use(Router)
@@ -117,6 +121,14 @@ export default new Router({
 			path: '/helpfeedback',
 			name: 'HelpFeedback',
 			component: xHelpFeedback
+		}, {
+			path: '/seting',
+			name: 'Seting',
+			component: xSeting
+		}, {
+			path: '/login',
+			name: '	Login',
+			component: xlogin
 		}
 	]
 

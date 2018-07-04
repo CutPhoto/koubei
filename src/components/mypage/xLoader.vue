@@ -3,14 +3,9 @@
 		width:'100%',
 		height:'100%',
 		position:'fixed',
-		top:0,
-		left:0,
 		backgroundColor:'#fff',
 		zIndex:'1000'
 	}">
-		<div class="left_arror">
-			<i class="iconfont icon-arrow-left-copy"></i>
-		</div>
 		<div class="page__bd">
 			<div class="weui-loadmore">
 				<i class="weui-loading"></i>

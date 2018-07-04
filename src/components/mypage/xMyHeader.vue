@@ -12,10 +12,9 @@
 		<div class="my_gallery_txt" v-show="isShowGallery">
 				<i class="my_sanjiao"></i>
 				<router-link to="/helpfeedback"><a class="my_h"><i class="my_hs iconfont icon-bangzhuyufankui"></i>帮助与反馈</a></router-link>
-				<a @click="toggleSeting"><i class="my_hs iconfont icon-shezhi"></i>设置</a>
+				<router-link to="/seting"><i class="my_hs iconfont icon-shezhi"></i>设置</router-link>
 			</div>
 		<xMessageCenter v-show="isShowMessage" />
-		<xSeting :data-hidseting="hidSeting" v-show="isShowSeting" />
 	</div>
 
 </template>
@@ -39,12 +38,6 @@
 				bus.$on("to_myheader_message", (data) => {
 					self.isShowMessage = data.isShowMessage
 				})
-			},
-			hidSeting() {
-				const self = this
-				bus.$on("to_myheader_seting", (data) => {
-					self.isShowSeting = data.isShowSeting
-				})
 			}
 		},
 		components: {
@@ -57,10 +50,6 @@
 			},
 			toggleHelpFeedback() {
 				this.isShowHelpFeedback = !this.isShowHelpFeedback;
-				this.isShowGallery = !this.isShowGallery;
-			},
-			toggleSeting() {
-				this.isShowSeting = !this.isShowSeting;
 				this.isShowGallery = !this.isShowGallery;
 			},
 			toggleMessageCenter() {

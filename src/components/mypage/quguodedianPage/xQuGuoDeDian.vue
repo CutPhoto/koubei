@@ -9,7 +9,7 @@
 		<div class="youhui_box_panel" v-html="">
 			<p class="youhui_box_ps">{{isShowData}}</p>
 			<p class="youhui_box_ps1">探索的附近好吃好玩的吧</p>
-			<p class="youhui_box_ps2">去逛逛></p>
+			<router-link to="nearby"><p class="youhui_box_ps2">去逛逛></p></router-link>
 		</div>
 	</div>
 </template>

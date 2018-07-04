@@ -4,7 +4,7 @@
 			<p @click="ShowDingDanDetail" :style="{color:colorJ,borderBottom:bdJ}">进行中</p>
 			<p @click="ShowDingDanTotal" :style="{color:colorT,borderBottom:bdT}">全部</p>
 		</div>
-		<xLoader :data-loader="loaderPage" v-if="isShowLoaderPage==='0'"/>
+		
 		<div class="goods_content" v-show="!isShowDingDanDetail">
 			<p class="no_dingdan">没有进行中的订单哦</p>
 		</div>
@@ -12,7 +12,7 @@
 			<p class="no_dingdan">在门店买到的宝贝会出现在这里</p>
 			<p class="no_dingdan1">看看附近的门店在卖啥</p>
 		</div>
-
+		<xLoader :data-loader="loaderPage" v-if="isShowLoaderPage==='0'"/>
 	</div>
 </template>
 

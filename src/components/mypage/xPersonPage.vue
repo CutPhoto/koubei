@@ -13,11 +13,11 @@
 				<div class="person_header_top_r"><span class="person_header_top_s iconfont icon-life-circle"></span><span class="iconfont icon-shezhi"></span></div>
 			</div>
 			<div id="person_header_bottom">
-				<div class="person_header_bottom_l">
-					<img src="../../../static/img/indexImg.png" alt="" />
+				<div class="person_header_bottom_l" :data-imgsrc="ToimgsrcUserName">
+					<img :src="imgsrc" alt="" />
 				</div>
 				<div class="person_header_bottom_r">
-					<span>organization</span>
+					<span v-text="username">organization</span>
 					<p><span class="person_hbr1">关注<i>0</i></span><span class="person_hbr2">粉丝<i>0</i></span></p>
 				</div>
 			</div>
@@ -38,9 +38,20 @@
 export default {
 	data() {
 		return {
-			isShowSpan: false
+			isShowSpan: false,
+			imgsrc:'',
+			username:''
 		}
 
+	},
+	computed:{
+		ToimgsrcUserName(){
+			const self = this
+			bus.$on("to-imgsrc",(data)=>{
+				self.imgsrc = data.imgsrc;
+				self.username = data.username;
+			})
+		}
 	},
 	methods: {
 		PersonPage() {

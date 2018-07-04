@@ -13,7 +13,6 @@
 		<xZhiFuDingDan v-else-if = "isShowPanel === 'zhifu'"/>
 		<xYuYueFuWu v-else = "isShowPanel === 'yuyue'"/>
 	</div>
-
 </template>
 
 <script>

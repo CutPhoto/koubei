@@ -5,12 +5,11 @@
 	}">
 		<div id="panel" :style="{
 				marginBottom:'74px'
-				
 			}">
-			<div id="person">
+			<div id="person" :data-imgsrc="Toimgsrc">
 				<a class="person_l">
-					<i class="person_ll" style="background-image: url('../../../static/img/indexImg.png')"></i>
-					<span class="person_lr">organization</span>
+					<i :data-userMessage="userMessage" class="person_ll" :style="{backgroundImage: `url(${imgsrc})`}"></i>
+					<span class="person_lr" v-text="username">organization</span>
 				</a>
 				<a @click="Loader" :data-showpersonpage="hidPersonPage" class="person_r">
 					<span>个人主页</span>
@@ -43,35 +42,43 @@
 			</div>
 
 			<section id="my_section">
-				<router-link to="/pingjia"><a class="my_pingjia">
-					<i class="my_preI iconfont icon-xinxi"></i>
-					<div class="my_pj">
-						<span>我的评价</span>
-						<p><i class="my_hb iconfont icon-hongbao"></i>立即评价,赢50元现金红包<i class="my_jt iconfont icon-jiantou2"></i></p>
-					</div>
-				</a></router-link>
-				<router-link to="/collect"><a class="my_pingjia">
-					<i class="my_preI iconfont icon-shoucang"></i>
-					<div class="my_pj">
-						<span>我的收藏</span>
-						<p><i class="my_jt iconfont icon-jiantou2"></i></p>
-					</div>
-				</a></router-link>
-				<router-link to="/quguodedian"><a class="my_pingjia">
-					<i class="my_preI iconfont icon-icon-"></i>
-					<div class="my_pj my_pj1">
-						<span>去过的店</span>
-						<p><i class="my_jt iconfont icon-jiantou2"></i></p>
-					</div>
-				</a></router-link>
+				<router-link to="/pingjia">
+					<a class="my_pingjia">
+						<i class="my_preI iconfont icon-xinxi"></i>
+						<div class="my_pj">
+							<span>我的评价</span>
+							<p><i class="my_hb iconfont icon-hongbao"></i>立即评价,赢50元现金红包<i class="my_jt iconfont icon-jiantou2"></i></p>
+						</div>
+					</a>
+				</router-link>
+				<router-link to="/collect">
+					<a class="my_pingjia">
+						<i class="my_preI iconfont icon-shoucang"></i>
+						<div class="my_pj">
+							<span>我的收藏</span>
+							<p><i class="my_jt iconfont icon-jiantou2"></i></p>
+						</div>
+					</a>
+				</router-link>
+				<router-link to="/quguodedian">
+					<a class="my_pingjia">
+						<i class="my_preI iconfont icon-icon-"></i>
+						<div class="my_pj my_pj1">
+							<span>去过的店</span>
+							<p><i class="my_jt iconfont icon-jiantou2"></i></p>
+						</div>
+					</a>
+				</router-link>
 				<div class="my_yhbg"></div>
-				<router-link to="/yinhangtehui"><a class="my_pingjia">
-					<i class="my_preI iconfont icon-lihe"></i>
-					<div class="my_pj my_pjLast">
-						<span>银行卡特惠</span>
-						<p><i class="my_jt iconfont icon-jiantou2"></i></p>
-					</div>
-				</a></router-link>
+				<router-link to="/yinhangtehui">
+					<a class="my_pingjia">
+						<i class="my_preI iconfont icon-lihe"></i>
+						<div class="my_pj my_pjLast">
+							<span>银行卡特惠</span>
+							<p><i class="my_jt iconfont icon-jiantou2"></i></p>
+						</div>
+					</a>
+				</router-link>
 				<div class="my_yhbg"></div>
 			</section>
 		</div>
@@ -91,7 +98,9 @@
 			return {
 				isShowPersonPage: false,
 				isShowLoaderPage: false,
-				isShowKouBeiKaPage: false
+				isShowKouBeiKaPage: false,
+				username:'',
+				imgsrc:''
 			}
 		},
 		computed: {
@@ -101,6 +110,28 @@
 					self.isShowPersonPage = data.isShowPersonPage
 					self.isShowLoaderPage = data.isShowLoaderPage
 				})
+			},
+			Toimgsrc(){
+				const self = this
+				bus.$emit("to-imgsrc",{
+					imgsrc:self.imgsrc,
+					username:self.username
+				})
+			},
+			userMessage() {
+				var UserMessage;
+				const cookie = document.cookie.split('; ');
+				cookie.map((item,idx)=>{
+					 const arr=item.split("=")
+					if(arr[0]==="UserMessage"){
+						UserMessage = JSON.parse(arr[1]);
+					}
+				})
+				UserMessage.map((item)=>{
+					this.username = item.username 
+					this.imgsrc =item.imgsrc
+				})
+				
 			}
 		},
 		components: {
@@ -138,6 +169,7 @@
 	}
 	
 	#person {
+		height: 51px;
 		display: flex;
 		justify-content: space-between;
 		padding: 10px 20px;
