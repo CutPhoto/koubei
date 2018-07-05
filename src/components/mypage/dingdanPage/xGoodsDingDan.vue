@@ -6,7 +6,16 @@
 		</div>
 		
 		<div class="goods_content" v-show="!isShowDingDanDetail">
-			<p class="no_dingdan">没有进行中的订单哦</p>
+			<p class="no_dingdan" v-show="!isShowOrder">没有进行中的订单哦</p>
+			<div v-show="isShowOrder" class="orderGoods">
+				<h1><i class="fl">{{orderGoods.shopName}}</i><i class="el-icon-arrow-right"></i><span class="fr">去付款</span></h1>
+				<img :src="orderGoods.src" class="fl"/>
+				<h2>{{orderGoods.title}}</h2>
+				<h4><span class="fl">共{{orderGoods.qty}}份</span></h4>
+				
+				<h5>实付款：{{orderGoods.price}}元</h5>
+				
+			</div>
 		</div>
 		<div class="goods_content" v-show="isShowDingDanDetail">
 			<p class="no_dingdan">在门店买到的宝贝会出现在这里</p>
@@ -26,7 +35,9 @@
 				colorT: '',
 				bdJ: '1px solid red',
 				bdT: '',
-				isShowLoaderPage:'0'
+				isShowLoaderPage:'0',
+				isShowOrder:true,
+				orderGoods:{}
 			}
 		},
 		computed: {
@@ -35,6 +46,11 @@
 					this.isShowLoaderPage = ''
 				}, 2000)
 			}
+		},
+		mounted() {
+			var str=localStorage.getItem(`myOrder`);
+			this.orderGoods =JSON.parse(str);
+			console.log(this.orderGoods)
 		},
 		components:{
 			xLoader
@@ -107,5 +123,33 @@
 		background-color: #fff;
 		padding: 5px 80px;
 		border: 1px solid #ccc
+	}
+	.orderGoods{
+		padding: 10px;
+	}
+	.orderGoods img{
+		width: 60px;
+		height: 60px;
+		margin: 10px;
+	}
+	.orderGoods h1,h2,h5,h4{
+		overflow: hidden;
+		font-size: 14px;
+		text-align: left;
+	}
+	.orderGoods h1 span{
+		color: red;
+		
+	}
+	.orderGoods h2{
+		margin-top: 10px;
+		width: 60%;
+		overflow: hidden;
+		text-overflow: ellipsis;
+		white-space: nowrap;
+	}
+	.orderGoods h5,h4{
+		color: #C0BFC4;
+		font-size: 12px;
 	}
 </style>
