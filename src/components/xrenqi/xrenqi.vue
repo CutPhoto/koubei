@@ -4,21 +4,21 @@
 			<i class="el-icon-view"></i><span>人气眼</span><span>美食佳肴</span>
 		</div>
 		<div class="renqi_b">
-			<div class="renqi_b_l">
+			<router-link to="/shopDetails" class="renqi_b_l">
 				<img src="../../assets/renqi1.jpg" alt="" />
 				<p>麦当劳（天源路..</p>
 				<p><span>人气88</span><del>456元</del></p>
-			</div>
-			<div class="renqi_b_c">
+			</router-link>
+			<router-link to="/shopDetails" class="renqi_b_c">
 				<img src="../../assets/renqi2.jpg" alt="" />
 				<p>星巴克（天河新..</p>
 				<p><span>人气95</span><del>769元</del></p>
-			</div>
-			<div class="renqi_b_r">
+			</router-link>
+			<router-link to="/shopDetails" class="renqi_b_r">
 				<img src="../../assets/renqi3.jpg" alt="" />
 				<p>百果园（合一潮...</p>
 				<p><span>人气89</span><del>192元</del></p>
-			</div>
+			</router-link>
 		</div>
 		
 	</div>

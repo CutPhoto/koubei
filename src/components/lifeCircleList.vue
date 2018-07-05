@@ -1,16 +1,18 @@
 <template>
 	<div>
-		<div class="lifeCircleList" v-for="item in lifeCircleArr">
-			<div @click="showDetails(item)">
-				<img class="indexImg" :src="item.imgSrc" />
-				<h2 class="title"><span>{{item.type}}</span>{{item.content}}</h2>
-			</div>
-			<div class="author">
-				<img :src="item.userImgSrc" />
-				<span class="userName">{{item.useName}}</span>
-				<div class="listCollect">
-					<i class="el-icon-star-off"></i>
-					<span>{{item.num}}</span>
+		<div id="lifeCircle">
+			<div class="lifeCircleList" v-for="item in lifeCircleArr">
+				<div @click="showDetails(item)">
+					<img class="indexImg" :src="item.imgSrc" />
+					<h2 class="title"><span>{{item.type}}</span>{{item.content}}</h2>
+				</div>
+				<div class="author">
+					<img :src="item.userImgSrc" />
+					<span class="userName">{{item.useName}}</span>
+					<div class="listCollect">
+						<i class="el-icon-star-off"></i>
+						<span>{{item.num}}</span>
+					</div>
 				</div>
 			</div>
 		</div>
@@ -20,17 +22,16 @@
 <script>
 	export default {
 		name: 'lifeCircleList',
-		props:['lifeCircleArr'],
+		props: ['lifeCircleArr'],
 		data() {
-			return {
-			};
+			return {};
 		},
-		computed:{
-			
+		computed: {
+
 		},
 		methods: {
-			showDetails(item){
-				this.$emit('toShow',true);
+			showDetails(item) {
+				this.$emit('toShow', true);
 				this.bus.$emit('showListDetails', item);
 			}
 		}
@@ -38,6 +39,10 @@
 </script>
 
 <style scoped>
+	#lifeCircle{
+		overflow: hidden;
+		margin-bottom: 60px;
+	}
 	.lifeCircleList {
 		width: 46%;
 		margin-bottom: 10px;

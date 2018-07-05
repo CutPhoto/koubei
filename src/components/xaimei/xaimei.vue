@@ -5,21 +5,21 @@
 			<i class="el-icon-goods"></i><span>爱美嗨玩</span><span>买多次更省钱</span>
 		</div>
 		<div class="aimei_b">
-			<div class="aimei_b_l">
+			<router-link to="/shopDetails" class="aimei_b_l">
 				<img img :src="commodity[0].src" alt="" />
 				<p v-text="commodity[0].name"></p>
 				<p><span v-text="commodity[0].price"></span><del v-text="commodity[1].del"></del></p>
-			</div>
-			<div class="aimei_b_c">
+			</router-link>
+			<router-link to="/shopDetails" class="aimei_b_c">
 				<img :src="commodity[1].src" alt="" />
 				<p v-text="commodity[1].name"></p>
 				<p><span v-text="commodity[1].price"></span><del v-text="commodity[1].del"></del></p>
-			</div>
-			<div class="aimei_b_r">
+			</router-link>
+			<router-link to="/shopDetails" class="aimei_b_r">
 				<img :src="commodity[2].src" alt="" />
 				<p v-text="commodity[2].name"></p>
 				<p><span v-text="commodity[2].price"></span><del v-text="commodity[2].del"></del></p>
-			</div>
+			</router-link>
 		</div>
 		<div class="aimei_k"></div>
 	</div>

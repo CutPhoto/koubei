@@ -237,7 +237,7 @@
     				
     				
     			}
-    			console.log(this.A)
+//  			console.log(this.A)
 			},
 			
 		},

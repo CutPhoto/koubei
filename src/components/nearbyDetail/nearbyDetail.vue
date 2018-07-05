@@ -2,7 +2,7 @@
 	<div id="nearbyDetail">
 		<div class="detailImg">
 			<img src="../../../static/img/detailImg0.png">
-			<a href="/shopDetails"><i></i></a>
+			<i @click="goBack"></i>
 		</div>
 		<div class="detailDivOwo">
 			<h3>稻家香|鲜鲍猪骨节瓜窝套餐</h3>
@@ -40,7 +40,12 @@
 				cardList:['1','2','3']
 			}
 		},
-		components:{shopCard,buttomButton}
+		components:{shopCard,buttomButton},
+		methods: {
+			goBack(){
+				history.back()
+			}
+		}
 	
 	}
 </script>

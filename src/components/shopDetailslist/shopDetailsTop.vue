@@ -1,6 +1,6 @@
 <template>
 	<h2 class="shopDetailsTop">
-		<router-link to="/nearby"><i class="el-icon-arrow-left"></i></router-link>
+		<i class="el-icon-arrow-left" @click="goBack"></i>
 		<span>
 			<i class="el-icon-star-off"></i>
 			<i class="el-icon-share"></i>
@@ -20,6 +20,9 @@
 		methods: {
 			handleSelect(key, keyPath) {
 				console.log(key, keyPath);
+			},
+			goBack(){
+				history.back()
 			}
 		}
 	}

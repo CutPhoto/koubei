@@ -8,7 +8,7 @@
 					  <span >{{text2}}</span>
 				</p>
 			</div>
-			<div class="chaowan_l_b">
+			<router-link to="/shopDetails" class="chaowan_l_b">
 				<div class="chaowan_l_b1">
 					<p v-text="commodity[0].name"></p>
 					<p v-text="commodity[0].names"></p>
@@ -17,7 +17,7 @@
 				<div class="chaowan_l_b2">
 					<img :src="commodity[0].src" alt="" />
 				</div>
-			</div>
+			</router-link>
 		</div>
 		<div class="chaowan_r">
 			<div class="chaowan_r_t">
@@ -27,7 +27,7 @@
 				
 				</p>
 			</div>
-			<div class="chaowan_r_b">
+			<router-link to="/shopDetails" class="chaowan_r_b">
 				<div class="chaowan_r_b1">
 					<p v-text="commodity[1].name"></p>
 					<p v-text="commodity[1].names"></p>
@@ -36,7 +36,7 @@
 				<div class="chaowan_r_b2">
 					<img :src="commodity[1].src" alt="" />
 				</div>
-			</div>
+			</router-link>
 		</div>
 		
 	</div>

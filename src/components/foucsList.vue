@@ -1,5 +1,6 @@
 <template>
 	<div>
+		<div id="foucs">
 		<div class="foucsList" v-for="list in foucsListArr">
 			<div class="author">
 				<img :src="list.userImgSrc" /></a>
@@ -17,6 +18,7 @@
 				</h2>
 			</div>
 			<h3><span><i class="el-icon-location-outline">1</i><i class="el-icon-star-off">1</i></span></h3>
+		</div>
 		</div>
 	</div>
 </template>
@@ -40,6 +42,10 @@
 </script>
 
 <style scoped>
+	#foucs{
+		overflow: hidden;
+		margin-bottom: 60px;
+	}
 	.foucsList{
 		padding: 10px;
 	}

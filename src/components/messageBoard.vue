@@ -66,6 +66,10 @@
 </script>
 
 <style scoped>
+	.messageBoard{
+		overflow: hidden;
+		margin-bottom: 60px;
+	}
 	.messageBoard .messageBoardList{
 		padding-left: 0;
 	}
