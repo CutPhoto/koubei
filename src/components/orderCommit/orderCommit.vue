@@ -1,8 +1,8 @@
 <template>
 	<div class="orderCommit">
-		<h3><i class="el-icon-arrow-left"></i> 提交订单</h3>
+		<h3><i class="el-icon-arrow-left" @click="goBack"></i> 提交订单</h3>
 		<div>
-			<img src="#">
+			<img :src="src">
 			<span>4份薰衣草风味冰淇淋花筒/华夫筒兑换券<br><span><i class="el-icon-success"></i>仅支持整单退</span></span>
 			<span><span>{{price}}元</span><br><span :style="{textDecoration:'line-through'}">52元</span></span>
 		</div>
@@ -27,15 +27,26 @@
 		data(){
 			return{
 				price:28,
-				qty:1
+				qty:1,
+				src:'#'
 			}
 		},
 		components:{inputNumber},
 		methods:{
 			inputQty(data){
 				this.qty = data
+			},
+			goBack(){
+				location.href = '/nearbyDetail'
 			}
-		}
+		},
+		mounted(){
+			this.src = location.search.replace('?','').replace(/%2F/g,'/');
+			console.log(this.src)
+		},
+
+			
+		
 	}
 </script>
 <style type="text/css">

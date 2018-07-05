@@ -1,5 +1,5 @@
 <template>
-	<div id="czzNearby" @touchstart = "allArrowsFalse" @click.native="changeScroll()">
+	<div id="czzNearby" @touchstart = "allArrowsFalse" >
 		<czzHeader :style="{height:'60px'}"/>
 		<div :class="{mainContent:true}">
 			<czzSpot :style="{ceiling:true}"/>
@@ -114,17 +114,9 @@
 					this.bus.$emit('allArrows',{arows:false})
 				}
 			},
-			changeScroll(){console.log(document.getElementById(czzNearby))
-				console.log(111)
-				// if(window.scrollY >= 60){
-				// 	this.ceiling = true
-				// }
-				// window.addEventListener('scroll',()=>{console.log(window.scrollY)})
-			}
+	
 		},
-		computed:{
-			
-		}
+		
 	}
 </script>
 <style type="text/css">

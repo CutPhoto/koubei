@@ -26,7 +26,7 @@
 			
 		},
 		methods:{
-			touchClickShow(e){
+			touchClickShow(e){console.log(123)
 				if(e.target.tagName=="LI"){
 					var index = e.target.getAttribute("data-index");
 					//事件分发至czzNav

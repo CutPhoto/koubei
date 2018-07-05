@@ -2,6 +2,7 @@
 	<div id="nearbyDetail">
 		<div class="detailImg">
 			<img src="../../../static/img/detailImg0.png">
+			<a href="/shopDetails"><i></i></a>
 		</div>
 		<div class="detailDivOwo">
 			<h3>稻家香|鲜鲍猪骨节瓜窝套餐</h3>
@@ -27,7 +28,7 @@
 			<h3>更多本店宝贝详情</h3>
 			<shopCard class="shopCard" v-for = "card in cardList"/>
 		</div>
-		<buttomButton />	
+		<buttomButton :btnsendsrc="'../../../static/img/detailImg0.png'"/>	
 	</div>
 </template>
 <script type="text/javascript">
@@ -58,6 +59,15 @@
 		display: flex;
 		flex-direction: column;
 		background-color: #ccc;
+	}
+	.detailImg{
+		position: relative;
+	}
+	.detailImg i{
+		width: 60px;
+		height: 60px;
+		position: absolute;
+		top:0;
 	}
 	.detailImg img{
 		width: 100%;
