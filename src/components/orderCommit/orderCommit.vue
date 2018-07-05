@@ -17,7 +17,7 @@
 		</div>
 		<span class="clientAgreement"><i class="el-icon-success"></i>我已经阅读并同意《口碑在线购买服务用户协议》</span>
 		<div class="playBtn">
-			<button>提交订单</button>
+			<router-link to="/dingdanhome"><button>提交订单</button></router-link>
 		</div>
 	</div>	
 </template>
