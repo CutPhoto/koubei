@@ -1,6 +1,6 @@
 <template>
 	<div :style="{position:'fixed',bottom:'0'}">
-		<span><i></i>收藏</span><span><a :href="`/orderCommit?${btnsendsrc}`">立即购买</a>	</span>
+		<span><i></i @click="collect">收藏</span><span><a :href="`/orderCommit?${btnsendsrc}`">立即购买</a>	</span>
 	</div>
 </template>
 <script type="text/javascript">

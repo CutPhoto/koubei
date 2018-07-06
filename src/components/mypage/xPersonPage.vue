@@ -22,7 +22,9 @@
 				</div>
 			</div>
 		</div>
-		<div id="person_status"><p class="person_status">暂无动态</p></div>
+		<div id="person_status">
+			<p class="person_status">暂无动态</p>
+		</div>
 		<div v-show="isShowSpan" class="person_opa"></div>
 		<span @click="showSpan" id="person_tj" class="person_s"><i class="iconfont icon-life-circle"></i></span>
 		<div v-show="isShowSpan" id="person_sanSpan">
@@ -35,36 +37,38 @@
 
 <script>
 	import bus from "../../bus.js";
-export default {
-	data() {
-		return {
-			isShowSpan: false,
-			imgsrc:'',
-			username:''
-		}
+	export default {
+		data() {
+			return {
+				isShowSpan: false,
+				imgsrc: '',
+				username: '',
+				gzUserName: '',
+				gzNum: 0
+			}
 
-	},
-	computed:{
-		ToimgsrcUserName(){
-			const self = this
-			bus.$on("to-imgsrc",(data)=>{
-				self.imgsrc = data.imgsrc;
-				self.username = data.username;
-			})
-		}
-	},
-	methods: {
-		PersonPage() {
-			bus.$emit("to-hidPersonPage", {
+		},
+		computed: {
+			ToimgsrcUserName() {
+				const self = this
+				bus.$on("to-imgsrc", (data) => {
+					self.imgsrc = data.imgsrc;
+					self.username = data.username;
+				})
+			}
+		},
+		methods: {
+			PersonPage() {
+				bus.$emit("to-hidPersonPage", {
 					isShowPersonPage: false,
-					isShowLoaderPage:false
+					isShowLoaderPage: false
 				})
 			},
-			showSpan(){
+			showSpan() {
 				this.isShowSpan = !this.isShowSpan
 			}
 		}
-		
+
 	}
 </script>
 
@@ -141,22 +145,25 @@ export default {
 		text-align: center;
 		overflow-x: hidden;
 	}
-	#person_tj{
+	
+	#person_tj {
 		position: fixed;
 		left: 20px;
 		bottom: 30px;
 	}
-	#person_sanSpan{
-		width:150px;
+	
+	#person_sanSpan {
+		width: 150px;
 		position: fixed;
 		left: 20px;
 		bottom: 30px;
-		display:flex;
+		display: flex;
 		justify-content: space-between;
 	}
-	.person_s{
+	
+	.person_s {
 		width: 35px;
-		height:35px;
+		height: 35px;
 		border-radius: 50%;
 		background-color: red;
 		line-height: 35px;
@@ -164,18 +171,21 @@ export default {
 		text-align: center;
 		color: #fff;
 	}
-	#person_sanSpan .person_s1{
+	
+	#person_sanSpan .person_s1 {
 		background-color: #999;
 	}
-	.person_opa{
+	
+	.person_opa {
 		position: fixed;
 		top: 0;
 		bottom: 0;
-		left:0;
-		right:0;
+		left: 0;
+		right: 0;
 		background-color: #ccc;
 		opacity: 0.1;
 	}
+	
 	.person_status {
 		padding: 0 20px;
 		margin-top: 150px;

@@ -33,6 +33,7 @@
 		display: flex;
 		justify-content: space-between;
 		padding: 0 20px;
+		background-color: #fff;
 	}
 	
 	.yinhang_box_h p span {

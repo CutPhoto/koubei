@@ -42,15 +42,16 @@
 		},
 		methods: {
 			login() {
-				var cookie = []
+				
+				const stor = []
 				this.userData.map((item) => {
 					if(this.userN === item.username && this.pas === item.password) {
 						location = "home?username=" + item.username;
-						cookie.push(item);
+						stor.push(item);
 						
 					}
 				})
-				document.cookie = "UserMessage=" + JSON.stringify(cookie);
+				localStorage.setItem("getUserMessage",JSON.stringify(stor))
 
 			}
 		}

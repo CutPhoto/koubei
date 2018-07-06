@@ -20,6 +20,7 @@
 		display: flex;
 		justify-content: space-between;
 		padding: 0 20px;
+		background-color: #fff;
 	}
 	
 	.ka_box_h p span {

@@ -63,6 +63,7 @@
 		display: flex;
 		justify-content: space-between;
 		padding: 0 20px;
+		background-color: #fff;
 	}
 	
 	.pingjia_box_h p span {
@@ -84,6 +85,7 @@
 		height: 45px;
 		line-height: 45px;
 		text-align: center;
+		background-color: #fff;
 	}
 	
 	#Goods_Ding_Dan .goods_content {

@@ -30,7 +30,7 @@
 			loaderPage() {
 				setTimeout(() => {
 					this.isShowLoaderPage = ''
-				}, 2000)
+				}, 200)
 			}
 		},
 	}
@@ -44,6 +44,7 @@
 		display: flex;
 		justify-content: space-between;
 		padding: 0 20px;
+		background-color: #fff;
 	}
 	
 	.youhui_box_h p span {

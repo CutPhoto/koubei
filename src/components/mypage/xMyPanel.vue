@@ -1,7 +1,8 @@
 <template>
 	<div id="panel_box" :style="{
 		flex:1,
-		overflowX:'hidden'
+		overflowX:'hidden',
+		backgroundColor:'#fff'
 	}">
 		<div id="panel" :style="{
 				marginBottom:'74px'
@@ -99,8 +100,8 @@
 				isShowPersonPage: false,
 				isShowLoaderPage: false,
 				isShowKouBeiKaPage: false,
-				username:'',
-				imgsrc:''
+				username: '',
+				imgsrc: ''
 			}
 		},
 		computed: {
@@ -111,27 +112,20 @@
 					self.isShowLoaderPage = data.isShowLoaderPage
 				})
 			},
-			Toimgsrc(){
+			Toimgsrc() {
 				const self = this
-				bus.$emit("to-imgsrc",{
-					imgsrc:self.imgsrc,
-					username:self.username
+				bus.$emit("to-imgsrc", {
+					imgsrc: self.imgsrc,
+					username: self.username
 				})
 			},
 			userMessage() {
-				var UserMessage;
-				const cookie = document.cookie.split('; ');
-				cookie.map((item,idx)=>{
-					 const arr=item.split("=")
-					if(arr[0]==="UserMessage"){
-						UserMessage = JSON.parse(arr[1]);
-					}
+				var stor=JSON.parse(localStorage.getItem('getUserMessage'))
+				stor.map((item) => {
+					this.username = item.username
+					this.imgsrc = item.imgsrc
 				})
-				UserMessage.map((item)=>{
-					this.username = item.username 
-					this.imgsrc =item.imgsrc
-				})
-				
+
 			}
 		},
 		components: {
@@ -144,7 +138,7 @@
 				this.isShowLoaderPage = !this.isShowLoaderPage
 				setTimeout(() => {
 					this.isShowPersonPage = !this.isShowPersonPage
-				}, 1000)
+				}, 200)
 			},
 			KouBeiKaPage() {
 				var self = this;

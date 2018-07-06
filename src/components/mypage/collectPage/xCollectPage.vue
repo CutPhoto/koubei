@@ -73,6 +73,7 @@
 		display: flex;
 		justify-content: space-between;
 		padding: 0 20px;
+		background-color: #fff;
 	}
 	
 	.pingjia_box_h p span {
@@ -87,6 +88,7 @@
 	.Goods_dd_tc {
 		display: flex;
 		border-top: 1px solid #F8F8F8;
+		background-color: #fff;
 	}
 	
 	.Goods_dd_tc p {

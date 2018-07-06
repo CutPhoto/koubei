@@ -21,7 +21,6 @@
 			<p class="no_dingdan">在门店买到的宝贝会出现在这里</p>
 			<p class="no_dingdan1">看看附近的门店在卖啥</p>
 		</div>
-		<xLoader :data-loader="loaderPage" v-if="isShowLoaderPage==='0'"/>
 	</div>
 </template>
 
@@ -35,16 +34,8 @@
 				colorT: '',
 				bdJ: '1px solid red',
 				bdT: '',
-				isShowLoaderPage:'0',
 				isShowOrder:true,
 				orderGoods:{}
-			}
-		},
-		computed: {
-			loaderPage() {
-				setTimeout(() => {
-					this.isShowLoaderPage = ''
-				}, 2000)
 			}
 		},
 		mounted() {
@@ -74,10 +65,11 @@
 	}
 </script>
 
-<style>
+<style scoped>
 	#Goods_Ding_Dan {
 		width: 100%;
 		height: 100%;
+		background-color: #fff;
 	}
 	
 	.Goods_dd_tc {

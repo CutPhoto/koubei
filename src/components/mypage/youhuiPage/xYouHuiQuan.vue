@@ -19,6 +19,7 @@
 		display: flex;
 		justify-content: space-between;
 		padding:0 20px;
+		background-color: #fff;
 	}
 	.youhui_box_h p span{
 		margin-left: 20px;

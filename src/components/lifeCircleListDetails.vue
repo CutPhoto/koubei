@@ -44,70 +44,77 @@
 		computed: {
 			getlistArr() {
 				this.bus.$on('showListDetails', (item) => {
-					this.lifeCircleListArr.splice(0,1,item);
+					this.lifeCircleListArr.splice(0, 1, item);
 				})
 			}
 		},
 		methods: {
-			showDetails(){
-				this.$emit('toShow',false);
+			showDetails() {
+				this.$emit('toShow', false);
 			}
 		}
 	};
 </script>
 
 <style scoped>
-	.details{
+	.details {
 		font-size: 14px;
 		width: 100%;
 		padding: 10px;
 	}
-	.details .detailsTop{
+	
+	.details .detailsTop {
 		position: relative;
 		margin-bottom: 10px;
 		width: 100%;
 	}
-	.details .detailsTop img{
+	
+	.details .detailsTop img {
 		height: 250px;
 		width: 100%;
 	}
-	.details .detailsTop .goBack{
+	
+	.details .detailsTop .goBack {
 		position: absolute;
 		color: #fff;
 		font-size: 28px;
 		left: 10px;
 		top: 10px;
 	}
-	.details .detailsTop .toShare{
+	
+	.details .detailsTop .toShare {
 		position: absolute;
 		color: #fff;
 		font-size: 28px;
 		right: 10px;
 		top: 10px;
 	}
-	.details .detailsTop .detailsImgPages{
+	
+	.details .detailsTop .detailsImgPages {
 		position: absolute;
 		right: 5px;
 		bottom: 15px;
-		padding:5px 10px;
+		padding: 5px 10px;
 		background: #796347;
 		opacity: 0.6;
 		border-radius: 20px;
 		color: #fff;
 	}
-	.details .detailsTop .detailsImgPages span{
+	
+	.details .detailsTop .detailsImgPages span {
 		display: inline-block;
 		width: 20px;
 		text-align: center;
-		
 	}
-	.details .author{
+	
+	.details .author {
 		width: 100%;
 		margin-bottom: 10px;
 		font-size: 12px;
-		margin:10px 0;
+		margin: 10px 0;
 		height: 50px;
 	}
+	
 	.details .author img {
 		width: 54px;
 		height: 48px;
@@ -116,53 +123,61 @@
 		vertical-align: top;
 		margin: 0 10px;
 	}
+	
 	.details .author .userName {
 		font-size: 16px;
 		color: #262626;
 		margin-bottom: 10px;
 		line-height: 34px;
 	}
-	.details .author .el-button{
+	
+	.details .author .el-button {
 		float: right;
 		vertical-align: bottom;
 		background: #fc5b00;
 		color: #fff;
 		margin-top: 10px;
 	}
-	.details h2{
+	
+	.details h2 {
 		color: #353535;
-		line-height:28px;
+		line-height: 28px;
 		font-size: 14px;
 		margin: 10px 0;
-		
 	}
-	.details h2 span{
-		color:#526a9b;
+	
+	.details h2 span {
+		color: #526a9b;
 	}
-	.details h3{
+	
+	.details h3 {
 		font-size: 12px;
 		color: #8a8a8a;
 		background: #f2f2f2;
 		line-height: 18px;
 		padding: 5px 10px;
 	}
-	.details h3 i:first-child{
-		color:#fc5b00 ;
+	
+	.details h3 i:first-child {
+		color: #fc5b00;
 	}
-	.details h3 i:last-child{
-		color:#d8d8d8 ;
+	
+	.details h3 i:last-child {
+		color: #d8d8d8;
 		float: right;
 		line-height: 18px;
 	}
-	.details h5{
+	
+	.details h5 {
 		font-size: 12px;
 		color: #ccc;
 		border-bottom: 1px solid #ccc;
 		line-height: 50px;
 		margin: 0;
 	}
-	.details h5 i{
+	
+	.details h5 i {
 		float: right;
-		line-height:30px;
+		line-height: 30px;
 	}
 </style>
